@@ -1,0 +1,16 @@
+
+# Note: use $(VAR) to reference a previously defined variable VAR
+#       VAR *must* be defined above where it is used, or it will not be substituted
+
+# Certificate distribution version information
+OUR_CERTS_MAJOR_VERSION = 40
+OUR_CERTS_MINOR_VERSION = 1
+IGTF_CERTS_VERSION = 1.24
+CERTS_DESCRIPTION = v$(OUR_CERTS_MAJOR_VERSION) (includes IGTF $(IGTF_CERTS_VERSION) CAs)
+
+# Locations
+ROOT = /p/vdt/public/html/
+CERTS_DIR = $(ROOT)/software/certificates
+TARBALL_NAME = certificates-$(OUR_CERTS_MAJOR_VERSION)-$(OUR_CERTS_MINOR_VERSION).tar.gz
+TARBALL_PATH = $(CERTS_DIR)/$(OUR_CERTS_MAJOR_VERSION)/$(TARBALL_NAME)
+WEB_PATH = http://vdt.cs.wisc.edu/software/certificates/$(TARBALL_NAME)

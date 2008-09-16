@@ -1,0 +1,309 @@
+Changes to the VDT certificates package
+
+===== Version 40 =====
+Released on 08-Sep-2008
+
+- Removed Teragrid CA Certificates
+    PSC Kerberos CA (290a3b29)
+    San Diego Supercomputing Center (3deda549)
+    NCSA (4a6cd8b1)
+    Purdue (67e8acfa)
+    Purdue (95009ddc)
+    TACC (9a1da9f9)
+    PSC Root CA (9b88e95b)
+    PSC Hosts CA (acc06fda)
+    NPACI (b89793e4)
+
+- Removed Fermilab KCA CA (e1fce4e9)
+
+- Removed doegrids subdirectory.  Please note, the CAs from the 
+  doegrids subdirectory are still included in the current IGTF 
+  distribution.  These CAs are:
+    DOE Grids (1c3f2ca8)
+    ESnet Root (d1b603c3)
+
+===== Version 39 =====
+Released on 29-Jul-2008
+
+Updated to IGTF 1.24:
+  - Withdrew NCHC CA (hash 71a89a47) for urgent operational reasons
+
+===== Version 38 =====
+Released on 28-Jul-2008
+
+Updated to IGTF 1.23:
+  - Updated metadata for CyGrid (CY), SlovakGrid (SK), Grid-FR (FR)
+    and NCSA-SLCS and MICS (US)
+  - Removed old UKeScienceRoot (8175c1cd) and UKeScience (adcbc9ef)
+    that were replaced in 2006 by updated root and issuing CAs (UK)
+  - Updated LIPCA certificate (11b4a5a2), based on same key pair (PT)
+  - Added accredited CAs:
+     MREN (3232b9bc)
+     NCHC (71a89a47)
+     PRAGMA-UCSD (7721d4d3)
+     NGO-Netrust (d1737728)
+
+===== Version 37 =====
+Released on 23-Jun-2008
+
+Updated to IGTF 1.22:
+  - Added acccredited classic CA, Iran-Grid (ce33db76)
+  - Removed expiring ASGCCA (a692434d)
+  - Updated extensions in PK-Grid-2007 root certificate (same key
+    pair) 
+
+Non-IGTF updates:
+  - We included the USC CA (2ca73e82) because we accept the CA's that
+    TeraGrid accept. Recently this CA was dropped by TeraGrid, so we
+    no longer include it. (It's not part of the IGTF distribution.)
+
+===== Version 36 =====
+Released on 16 May 2008
+
+Updated to IGTF 1.21:
+  - Important update of the UKeScience Root and Issuing CAs
+
+===== Version 35 =====
+Released on 17-Mar-2008
+
+Updated to IGTF 1.20:
+  - Added MARGI CA (7d0d064a) 
+  - Removed expired SWITCH CAs (072fe468.0, 4aa5ef7d)
+  - Corrected namespace syntax for SWITCHaai CA
+  - Updated namespace definitions in DFN GridGermany hierarchy
+
+===== Version 34 =====
+Released on 4-Feb-2008
+
+Updated to IGTF 1.19:
+  - Added CAs:
+    = Added PK-Grid-2007 Root CA certificate (has f5ead794, will
+      supersede d2a353a5) 
+    = New classic CA UGRID (hash 0a12b607) for the Ukraine (UA)
+    = New classic CA UNAM-grid (hash 24c3ccde) for Mexico (MX)
+  - New contact email address for all PK-Grid CAs (PK) 
+  - Updated and extended lifetime of ArmeSFo root cert with same
+    keypair (AM) 
+  - New CA certificate download locations for SwissSign CAs (CH)
+
+===== Version 33 =====
+Released on 18-Nov-2007
+
+Updated to IGTF 1.18:
+  - Withdrew three CAs:
+    = Expired CA "Spain" (hash 13eab55e) (Actually done in release 32) 
+    = Expired CA "SiGNET" (hash 747183a5) 
+    = Discontinued CA "CERN" (hash fa3af1d7)
+  - Added CAs: 
+    = ASGCCCA-2007 (9cd75e87) added to Accredited Classic set again
+    = UNLPGrid CA (classic, hash b7bcb7b2)
+    = MaGrid CA (classic, hash 7b54708e)
+    = New UK e-Science CA hierarchy "-2007" added (98ef0ee5 and 367b75c3)
+  - Updated SWITCH (classic) signing namespace policies
+  - New contact email address for the SlovakGrid CA (e13e0fcf)
+
+===== Version 32 =====
+
+* Removed the expired DATAGRID-ES CA (13eab55e). It was replaced by
+  the pkIRISgrid CA (9dd23746) a while ago. This will be removed from
+  the upcoming IGTF 1.18 release. 
+
+===== Version 31 =====
+Released on 11-Oct-2007
+
+* Upgraded to IGTF 1.17 distribution:
+  - Added new RomanianGRID CA classic authority (1f3834d0)
+
+  - BEGrid CA (03aa0ecb) now provides an http URL for CRL download
+    instead of an https URL. 
+
+  - Updated list of SWITCH eligible organizations (072fe468, 47d3d1a0,
+    4aa5ef7d, eebc7717
+
+  - New contact email addresses for the AustrianGrid CA (6e3b436b),
+    CNRS (12a1d8c2) and IUCC (6fee79b0)
+
+  Note 1: This IGTF release removed the Expired INFN (49f18420) CA. We
+  removed it in version 30 of the VDT CA Certificates, before IGTF
+  1.17 was releaseed. 
+
+  Note 2: This IGTF release claimed " Updated ASGCCA-2007 certificate
+  extensions (TW)", but this will actually happen in IGTF 1.18
+
+===== Version 30 =====
+
+* Removed the expired INFN CA (49f18420). Don't worry, the newer INFN
+  CA (2f3fadf6) still exists. 
+
+===== Version 29 =====
+
+Released on 8-Aug-2007
+
+* Updated to IGTF 1.16 CA distribution
+  - Added Chilean REUNA CA (295adc19)
+  - Added Korean KISTI 2007 CA (722e5071)
+  - Added NCSA MICS CA (9b95bbf2)
+  - Added Latin American and Caribbean Catch-all Grid CA (LACGrid) CA (a9082267)
+  - Added NCSA SLCS CA (f2e89fe3)
+  - Removed expired Greek Hellas Grid CA (ede78092)
+  - Note: IGTF 1.16 also removed expired UK e-Science CA, but we
+    removed it in version 28, when it expired
+  - Corrected namespace for APAC CA
+  - Updated SWITCH namespace
+
+===== Version 28 =====
+
+Released on 5-Aug-2007
+
+* Removed old UK e-Science CA certificate (01621954) which expired on
+  August 4, 2007. There is still a newer CA Certificate (8175c1cd) for
+  the UK e-Science CA. 
+
+===== Version 27 =====
+
+Released on 19-Jul-2007
+
+* Updated to the IGTF 1.15 CA distribution
+  - Removed the Taiwanese ASGCC-2007 CA (efdf6f74)
+
+===== Version 26 =====
+
+Released on 4-June-2007
+
+* Updated to the IGTF 1.14 CA distribution.
+  - Added the Serbian AEGIS CA (393f7863)
+  - Added the Taiwanese ASGCC-2007 CA (efdf6f74)
+  - Updated signing policy for APAC CA
+  - New organisations added for SWITCH Classic CA (CH)
+  - DutchGrid robot certificates added to signing namespace (NL)
+
+===== Version 25 =====
+
+* Removed Telescience CA (34a5e0db) because it is no longer accepted
+  by TeraGrid, and that was the sole reason it was in the VDT.
+
+===== Version 24 =====
+
+* Removed old Grid Canada CA (5f54f417) because it was expired
+  This will happen in the next IGTF release, but we didn't wait
+  to remove it in the VDT because it was affecting VDT nightly test
+  results. It's safe to remove because it is expired.
+
+===== Version 23 =====
+
+Released on 13-March-2007
+
+* Updated to the IGTF 1.13 CA distribution.
+  - Removed the old (pre-2004) Portuguese LIP CA (41380387)
+  - Added the SWITCHgrid-Root CA (d0b701c0)
+  - Added the SWITCHslcs CA (304cf809)
+  - Added the BG-ACAD CA (2418a3f3)
+  - Extended lifetime of CyGrid CA to 2013 based on same key pair (afe55e66)
+  - Updated ArmeSFO CA root certificate following TACAR (d0c2a341)
+  - Extended lifetime of NorduGrid CA for 2 years (1f0e8352) 
+
+===== Version 22 =====
+
+Released on 9-Feb-2007
+
+* Fixed the Telescience CRL URL.
+
+* Updated to IGTF 1.12 CA distribution. This added some new SWITCH
+  CAs, removed some old SWITCH CAs, added a NECTEC GOC CA, and tweaked
+  a few other things. Details can be found at:
+
+  https://dist.eugridpma.info/distribution/igtf/1.12/CHANGES
+
+
+===== Version 21 =====
+
+Released on 11-Jan-2007
+
+* Updated to the IGTF 1.11 CA distribution. This updated the ESnet and
+  DOEGrids CA certificates to extend their lifetimes. It also removed
+  the old Russian DataGrid CA (d64ccb53) which has superseeded by the
+  RDIG CA. A couple of crl_url were updated and the SWITCH CA signing
+  policy files were updated. Details can be found at:
+
+  https://dist.eugridpma.info/distribution/igtf/1.11/CHANGES
+
+===== Version 20 =====
+
+Released on 10-Dec-2006
+
+* Updated to the IGTF 1.10 CA distribution. This removed the KISTI CA
+  (47183fda), and added a new CERN CA (1d879c6c & d254cc30) and a new
+  INFN CA (2f3fadf6). Other miscellaneous information was updated as
+  well. 
+
+===== Version 19 =====
+
+Released on 10-Oct-2006
+
+* Updated to the IGTF 1.9 CA distribution.  Added new certificates for
+  HellasGrid (root and normal) and SiGNET; updated AustrianGrid and CNIC
+  certificates.
+
+* Updated the doegrids subdirectory and added the original tarball and signature
+  files for versioning.
+
+===== Version 18 =====
+
+Released on 29-Aug-2006
+
+* Updated to the IGTF 1.8 CA distribution.  Added new certificates for CNIC
+  Root, CNIC SDG, and NAREGI.
+
+* Removed the expired PSC certificates and added their new ones.
+
+===== Version 17 =====
+
+Released on 1-Aug-2006
+
+* Updated to the IGTF 1.7 CA distribution.  Removed the old and expired CESNET
+  certificate, and added two UK e-Science ones and one each for BrGrid & SRCE.
+
+===== Version 16 =====
+
+Released on 23-Jun-2006
+
+* Updated to the IGTF 1.6 CA distribution (skipping the IGTF 1.5 distribution).
+  There were a few minor changes from IGTF 1.4 to 1.5, and then 1.6 dropped the
+  Naregi CA certificate due to a short key length.
+
+===== Version 15 ===== 
+
+* Updated to the IGTF 1.4 CA distribution. The only notable
+  change here was an update to the expired NorduGrid CA.
+
+===== Version 14 =====
+
+* Updated to the IGTF 1.2 CA distribution
+
+===== Version 13 =====
+
+* Removed NASA CA (bc82f877) because it is no longer used.
+
+* Added a crl_url file for NCSA CA (4a6cd8b1)
+
+* Added a crl_url file for SDSC CA (b89793e4)
+
+===== Version 12 =====
+
+* Upgraded from IGTF 1.0 to IGTF 1.1 CAs
+
+* Added TeraGrid CAs:
+
+  2ca73e82 USC
+  34a5e0db Telescience
+  3deda549 SDSC
+  67e8acfa Purdue TeraGrid RA
+  85ca9edc PSC Kerberos CA
+  95009ddc Purdue CA
+  9a1da9f9 TACC
+  aa99c057 PSC
+
+* Removed unaccredited CAs that were mistakenly included:
+
+  75304a28 DutchDemo CA 
+  225860ae EDG Tutorial Worthless CA

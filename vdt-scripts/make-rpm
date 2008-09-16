@@ -1,0 +1,136 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+##
+## Read defs file
+##
+my %vars = %{read_defs("../defs")};
+
+my $cur_dir = `pwd`;
+chomp($cur_dir);
+
+print "Making RPM of $vars{TARBALL_PATH}...\n";
+print "    Certificates version: $vars{OUR_CERTS_MAJOR_VERSION}\n";
+print "    Certificates release: $vars{OUR_CERTS_MINOR_VERSION}\n";
+
+make_rpm_dirs();
+unpack_certs();
+write_spec_file();
+my $exit = make_rpm();
+if (!$exit) {
+    #$exit = copy_rpm();  # EDIT - uncomment this line when releasing
+    if (!$exit) {
+        #update_yum();  # EDIT - uncomment this line when releasing
+    }
+}
+exit $exit;
+
+sub make_rpm_dirs {
+    print "    Making working directories...\n";
+    system("rm -rf rpm"); # Make sure there is no old cruft 
+    system("mkdir -p rpm/BUILD");
+    system("mkdir -p rpm/RPMS");
+    system("mkdir -p rpm/SOURCES");
+    system("mkdir -p rpm/SPECS");
+    system("mkdir -p rpm/SRPMS");
+    system("mkdir -p rpm/tmp");
+    return;
+}
+
+sub unpack_certs {
+    print "    Unpackaging certificate tarball...\n";
+    system("mkdir -p rpm/tmp/etc/grid-security");
+    chdir("rpm/tmp/etc/grid-security");
+    system("cp $vars{TARBALL_PATH} .");
+    system("tar xzf $vars{TARBALL_NAME}");
+    system("rm $vars{TARBALL_NAME}");
+    chdir($cur_dir);
+    return;
+}
+
+sub write_spec_file {
+    print "    Writing spec file...\n";
+
+    chdir("rpm/tmp/etc/grid-security");
+
+    # Note that this `ls` does not recurse into subdirectories, but merely listing the
+    # directory name is good enough for RPM to suck up all the files in that directory.
+    my @files = sort `ls -1d certificates/* `;
+    chomp(@files);
+    chdir($cur_dir);
+
+    open(SPEC_FILE, "> rpm/SPECS/cert.spec");
+    print SPEC_FILE "Summary: CA Certificates for the Virtual Data Toolkit\n";
+    print SPEC_FILE "Name:  vdt-ca-certs\n";
+    print SPEC_FILE "Version: $vars{OUR_CERTS_MAJOR_VERSION}\n";
+    print SPEC_FILE "Release: $vars{OUR_CERTS_MINOR_VERSION}\n";
+    print SPEC_FILE "Group: VDT\n";
+    print SPEC_FILE "License: n/a\n";
+    print SPEC_FILE "URL: http://vdt.cs.wisc.edu/certificate_authorities.html\n";
+    print SPEC_FILE "Vendor: Virtual Data Toolkit, Open Science Grid\n";
+    print SPEC_FILE "Packager: Virtual Data Toolkkit, Open Science Grid\n";
+    print SPEC_FILE "Prefix: /etc/grid-security\n";
+    print SPEC_FILE "Buildroot: $cur_dir/rpm/tmp\n";
+    print SPEC_FILE "BuildArch: noarch\n";
+    print SPEC_FILE "%description\n";
+    print SPEC_FILE "The CA certificates distributed by the VDT\n";
+    print SPEC_FILE "They are based on IGTF release $vars{IGTF_CERTS_VERSION} ";
+    print SPEC_FILE "and include TeraGrid CAs that are not in the IGTF.\n";
+    print SPEC_FILE "%prep\n";
+    print SPEC_FILE "%build\n";
+    print SPEC_FILE "%install\n";
+    print SPEC_FILE "%files\n";
+    print SPEC_FILE "%defattr(-, root, root)\n";
+
+    foreach my $file (@files) {
+        print SPEC_FILE "/etc/grid-security/$file\n";
+    }
+}
+
+sub make_rpm {
+    my $ret;
+    print "    Making RPM... ";
+    $ret = system("rpmbuild --define \"_topdir $cur_dir/rpm\" -bb rpm/SPECS/cert.spec > $cur_dir/rpm/rpm.log 2>&1");
+    if ($ret == 0) {
+        print "Success.\n";
+    } 
+    else {
+        print "Failed, log in $cur_dir/rpm/rpm.log\n";
+    }
+    return $ret;
+}
+
+sub copy_rpm {
+    print "    Copying RPM into place...\n";
+    return system("cp rpm/RPMS/noarch/vdt-*rpm /p/vdt/public/html/vdt_rpms/vdt-ca-certs/.");
+}
+
+sub update_yum {
+    print "    Updating yum repository...\n";
+    chdir("/p/vdt/public/html/vdt_rpms/vdt-ca-certs/");
+    system("createrepo .");
+    chdir($cur_dir);
+    return;
+}
+
+
+sub read_defs {
+    my $file = shift;
+    open(DEFS, "<", "$file") or die("Cannot read defs file: $!");
+    my @lines = <DEFS>;
+    close(DEFS);
+    
+    # Strip whitespace and comments
+    @lines = grep !/^\#/, map { s/^\s+//; s/\s+$//; $_ } @lines;
+    
+    # Process the lines
+    my %tmp;
+    foreach my $line (@lines) {
+        my ($key, $value) = split /\s*=\s*/, $line, 2;
+        next unless($key && $value);
+        $value =~ s/\$\(([^\)]+)\)/$tmp{$1}/g;
+        $tmp{$key} = $value;
+    }
+    return \%tmp;
+}

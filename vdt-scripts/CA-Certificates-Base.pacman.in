@@ -1,0 +1,25 @@
+description = 'IGTF CA certificates distribution'
+url = 'http://vdt.cs.wisc.edu/certificate_authorities.html'
+depends = [
+           'VDT-Common',
+           'VDT-Environment'
+          ]
+usePackageRoot = 0
+suffixHandling = 0
+install = {
+           '*': [
+                 'vdt-begin-install CA-Certificates-Base',
+                 'mkdir -p vdt/var',
+                 'echo "!!OUR_CERTS_MAJOR_VERSION!!-!!OUR_CERTS_MINOR_VERSION!!" > vdt/var/ca-certs-version',
+                 'vdt-untar !!TARBALL_NAME!!',
+                 'vdt/bin/vdt-version -add CERTS -version "CA Certificate !!CERTS_DESCRIPTION!!"',
+                 'vdt-end-install'
+                ]
+          }
+source = 'http://vdt.cs.wisc.edu/software/certificates/!!OUR_CERTS_MAJOR_VERSION!!/'
+download = {
+            '*': '!!TARBALL_NAME!!'
+           }
+uninstall = [
+             'vdt/bin/vdt-version -remove CERTS'
+            ]
