@@ -75,8 +75,7 @@ sub write_spec_file {
     print SPEC_FILE "BuildArch: noarch\n";
     print SPEC_FILE "%description\n";
     print SPEC_FILE "The CA certificates distributed by the VDT\n";
-    print SPEC_FILE "They are based on IGTF release $vars{IGTF_CERTS_VERSION} ";
-    print SPEC_FILE "and include TeraGrid CAs that are not in the IGTF.\n";
+    print SPEC_FILE "They are based on IGTF release $vars{IGTF_CERTS_VERSION}.\n";
     print SPEC_FILE "%prep\n";
     print SPEC_FILE "%build\n";
     print SPEC_FILE "%install\n";
