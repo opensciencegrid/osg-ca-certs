@@ -20,7 +20,7 @@ print "Certificates version: $vars{OUR_CERTS_MAJOR_VERSION}-$vars{OUR_CERTS_MINO
 if(-e $vars{TARBALL_PATH}) {
     die("ERROR: a tarball already exists at $vars{TARBALL_PATH}\n");
 }
-system("cd ..; tar -czf $vars{TARBALL_PATH} certificates");
+system("cd ..; tar czf $vars{TARBALL_PATH} `find certificates ! -name \\*~ ! -name .#\\* ! -type d | grep -v '\.svn'`");
 print "Created tarball at $vars{TARBALL_PATH}\n";
 
 ##
