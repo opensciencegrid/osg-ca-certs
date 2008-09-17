@@ -13,4 +13,4 @@ ROOT = /p/vdt/public/html/
 CERTS_DIR = $(ROOT)/software/certificates
 TARBALL_NAME = certificates-$(OUR_CERTS_MAJOR_VERSION)-$(OUR_CERTS_MINOR_VERSION).tar.gz
 TARBALL_PATH = $(CERTS_DIR)/$(OUR_CERTS_MAJOR_VERSION)/$(TARBALL_NAME)
-WEB_PATH = http://vdt.cs.wisc.edu/software/certificates/$(TARBALL_NAME)
+WEB_PATH = http://vdt.cs.wisc.edu/software/certificates/$(OUR_CERTS_MAJOR_VERSION)/$(TARBALL_NAME)
