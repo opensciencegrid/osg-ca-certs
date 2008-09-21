@@ -19,9 +19,9 @@ unpack_certs();
 write_spec_file();
 my $exit = make_rpm();
 if (!$exit) {
-    #$exit = copy_rpm();  # EDIT - uncomment this line when releasing
+    $exit = copy_rpm();
     if (!$exit) {
-        #update_yum();  # EDIT - uncomment this line when releasing
+        update_yum();
     }
 }
 exit $exit;

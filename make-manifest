@@ -4,8 +4,7 @@ use warnings;
 
 my %defs = %{read_defs("defs")};
 
-## EDIT - remove the "-test" from the end of $manifest_file when releasing
-my $manifest_file = "vdt-igtf-ca-certs-version-test";
+my $manifest_file = "vdt-igtf-ca-certs-version";
 my $new_manifest_file = "$manifest_file.new";
 
 if (! -e $defs{TARBALL_PATH}) {

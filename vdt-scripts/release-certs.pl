@@ -10,7 +10,7 @@ my %vars = %{read_defs("../defs")};
 ##
 ## Global variables
 ##
-my $PACMAN_FILE = "$vars{ROOT}/vdt_cert_cache2/CA-Certificates-Base.pacman";
+my $PACMAN_FILE = "$vars{ROOT}/vdt_cert_cache/CA-Certificates-Base.pacman";
 
 
 ##
@@ -47,9 +47,8 @@ close(OUT);
 
 system("cd ..; ./make-manifest");
 system("./make-rpm");
-# EDIT - uncomment these two lines when releasing
-#system("cp ../certificates/INDEX.txt $vars{ROOT}/releases/certs/ca_index-$(OUR_CERTS_VERSION).txt");
-#system("cp ../certificates/CHANGES $vars{ROOT}/releases/certs/ca_changes.txt");
+system("cp ../certificates/INDEX.txt $vars{ROOT}/releases/certs/ca_index-$(OUR_CERTS_MAJOR_VERSION).txt");
+system("cp ../certificates/CHANGES $vars{ROOT}/releases/certs/ca_changes.txt");
 
 
 sub read_defs {
