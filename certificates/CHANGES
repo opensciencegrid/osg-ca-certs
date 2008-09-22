@@ -1,20 +1,10 @@
 Changes to the VDT certificates package
 
 ===== Version 40 =====
-Released on 08-Sep-2008
+Released on 22-Sep-2008
 
-- Removed Teragrid CA Certificates
-    PSC Kerberos CA (290a3b29)
-    San Diego Supercomputing Center (3deda549)
-    NCSA (4a6cd8b1)
-    Purdue (67e8acfa)
-    Purdue (95009ddc)
-    TACC (9a1da9f9)
-    PSC Root CA (9b88e95b)
-    PSC Hosts CA (acc06fda)
-    NPACI (b89793e4)
-
-- Removed Fermilab KCA CA (e1fce4e9)
+- Updated Fermilab KCA CA (e1fce4e9). It is going to expire on October
+  8, 2008 and the new one will expire in 2018.
 
 - Removed doegrids subdirectory.  Please note, the CAs from the 
   doegrids subdirectory are still included in the current IGTF 
