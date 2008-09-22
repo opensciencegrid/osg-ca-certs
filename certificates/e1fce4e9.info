@@ -1,0 +1,12 @@
+#
+# @(#)$Id: e1fce4e9.info,v 1.6 2007/11/08 13:37:05 pmacvsdg Exp $
+# Information for CA FNAL_KCA
+#   obtained from e1fce4e9 in FNAL_KCA/
+alias = FNAL_KCA
+status = experimental
+ca_url = https://security.fnal.gov/pki/e1fce4e9.0
+crl_url = http://security.fnal.gov/pki/e1fce4e9.crl
+url = http://security.fnal.gov/pki/
+email = cst@fnal.gov
+sha1fp.0 = 9A:98:B8:DE:82:61:9F:1D:8E:44:05:95:55:4D:52:89:0D:D8:97:BA
+version = 1.24
