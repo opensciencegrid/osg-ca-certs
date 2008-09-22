@@ -47,7 +47,7 @@ close(OUT);
 
 system("cd ..; ./make-manifest");
 system("./make-rpm");
-system("cp ../certificates/INDEX.txt $vars{ROOT}/releases/certs/ca_index-$(OUR_CERTS_MAJOR_VERSION).txt");
+system("cp ../certificates/INDEX.txt $vars{ROOT}/releases/certs/ca_index-$vars{OUR_CERTS_MAJOR_VERSION}.txt");
 system("cp ../certificates/CHANGES $vars{ROOT}/releases/certs/ca_changes.txt");
 
 
