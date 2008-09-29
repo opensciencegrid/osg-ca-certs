@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use File::Basename;
 
 ##
 ## Parse defs file for version information
@@ -12,6 +13,12 @@ my %vars = %{read_defs("../defs")};
 ##
 my $PACMAN_FILE = "$vars{ROOT}/vdt_cert_cache/CA-Certificates-Base.pacman";
 
+##
+## Make a directory for the tarball
+##
+my $tarball_dir = dirname($vars{TARBALL_PATH});
+system("mkdir -p $tarball_dir");
+print("Made directory: $tarball_dir\n");
 
 ##
 ## Make a tarball from the certificates directory
