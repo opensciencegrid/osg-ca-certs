@@ -16,17 +16,6 @@ my $UPDATE_DIFF_FILENAME_TEMPLATE = 'igtf-@VERSION@-update-diffs.log';
 # CA Certificate hashes that are known to NOT be in the IGTF distro but are
 # going to be part of the VDT.
 my @WHITELIST = (
-);
-
-# CA Certificate hashes that we never want to add to the VDT.
-my @BLACKLIST = (
-    '225860ae',   # EDG tutorial worthless CA
-    '75304a28',   # Dutch demo worthless CA
-    '84c1f123',   # Old, expired CyGridCA certificate
-    '85ca9edc',   # PSC Kerberos (TeraGrid) - EXPIRED 2006-08-20
-    'aa99c057',   # PSC (TeraGrid) - EXPIRED 2006-08-20
-    'b38b4d8c',   # Globus worthless CA
-
      # Moved TeraGrid CAs from whitelist to blacklist when we stopped including them (Sept 2008)
     '290a3b29',   # PSC Kerberos CA (TeraGrid)
     '34a5e0db',   # Telescience (TeraGrid)
@@ -39,6 +28,16 @@ my @BLACKLIST = (
     'acc06fda',   # PSC Hosts CA (TeraGrid)
     'b89793e4',   # NPACI / SDSC (TeraGrid)
     'bc82f877',   # NASA / Ames Research Center
+);
+
+# CA Certificate hashes that we never want to add to the VDT.
+my @BLACKLIST = (
+    '225860ae',   # EDG tutorial worthless CA
+    '75304a28',   # Dutch demo worthless CA
+    '84c1f123',   # Old, expired CyGridCA certificate
+    '85ca9edc',   # PSC Kerberos (TeraGrid) - EXPIRED 2006-08-20
+    'aa99c057',   # PSC (TeraGrid) - EXPIRED 2006-08-20
+    'b38b4d8c',   # Globus worthless CA
 );
 
 # ========== END CONFIGURABLE ITEMS ==========
