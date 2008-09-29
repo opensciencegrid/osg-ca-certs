@@ -1,6 +1,17 @@
 Changes to the VDT certificates package
 
-===== Version 40 =====
+===== Version 41 =====
+Released on 29-Sep-2008
+
+Updated to IGTF 1.25
+  - Added accredited classic NCHC CA (71a89a47)
+  - Updated meta data for AIST GRID CA (a317c467)
+  - Updated AIST GRID CA (extended life time) based on same key pair (a317c467)
+  - Updated meta data for APAC Grid CA (1e12d831)
+  - Updated meta data (CRL URL) for NGO-Netrust CA (d1737728)
+  - updates to CA contact data in info files (multiple EU CAs)
+
+-==== Version 40 =====
 Released on 22-Sep-2008
 
 - Updated Fermilab KCA CA (e1fce4e9). It is going to expire on October

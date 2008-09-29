@@ -8,5 +8,5 @@ ca_url = https://security.fnal.gov/pki/e1fce4e9.0
 crl_url = http://security.fnal.gov/pki/e1fce4e9.crl
 url = http://security.fnal.gov/pki/
 email = cst@fnal.gov
-sha1fp.0 = 9A:98:B8:DE:82:61:9F:1D:8E:44:05:95:55:4D:52:89:0D:D8:97:BA
-version = 1.24
+sha1fp.0 = AA:A1:CF:F6:C4:11:93:5D:BD:48:22:57:20:08:94:87:68:45:AD:22
+version = 1.25

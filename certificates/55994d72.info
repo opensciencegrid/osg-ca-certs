@@ -8,5 +8,5 @@ crl_url = http://ice.grid.kiae.ru/ca/RDIG/cacrl.pem
 email = rdig-ca-support@grid.kiae.ru
 status = accredited:classic
 url = http://ca.grid.kiae.ru/RDIG/
-version = 1.24
+version = 1.25
 sha1fp.0 = CB:00:03:30:76:2E:94:31:07:D4:D7:DE:EC:55:FB:A0:E2:8B:73:94

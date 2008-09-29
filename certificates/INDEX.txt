@@ -29,6 +29,7 @@ Hash      Source                            More Information                    
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
 3d5be7bc  Slovenia - SiGNET CA              http://signet-ca.ijs.si/                            I
 3deda549  San Diego Supercomputing Center   http://www.sdsc.edu/CA/                             T
+71a89a47  NCHC                              http://ca.goc.nchc.org.tw/                          I
 468d15b3  Balkans - SeeGrid                 http://www.grid.auth.gr/pki/seegrid-ca/             I
 47d3d1a0  SWITCH-Personal-2007              http://swisssign.net                                I
 4a6cd8b1  USA - NCSA                        http://security.ncsa.uiuc.edu/CA/                   T
@@ -88,5 +89,5 @@ fe102e03  Germany - DFN-GridGermany-Server  http://www.pca.dfn.de/              
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.24 http://www.gridpma.org/ 
+I: IGTF 1.25 http://www.gridpma.org/ 
 T: TeraGrid  http://security.teragrid.org/

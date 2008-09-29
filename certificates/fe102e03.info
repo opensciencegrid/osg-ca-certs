@@ -9,5 +9,5 @@ email = dfnpca@dfn-cert.de
 requires = DFN-GridGermany-Root
 status = accredited:classic
 url = http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/html/cacert.html
-version = 1.24
+version = 1.25
 sha1fp.0 = 20:36:73:B7:15:93:15:28:5A:54:70:71:A1:DC:D7:B1:39:42:C5:09
