@@ -6,6 +6,7 @@ my %defs = %{read_defs("defs")};
 
 my $manifest_file = "vdt-igtf-ca-certs-version";
 my $new_manifest_file = "$manifest_file.new";
+my $compat_manifest_file = "ca-certs-version";
 
 if (! -e $defs{TARBALL_PATH}) {
     die "ERROR: No tarball at $defs{TARBALL_PATH}\n";
@@ -54,7 +55,9 @@ else {
 }
 
 system("mv $defs{CERTS_DIR}/$new_manifest_file $defs{CERTS_DIR}/$manifest_file");
+system("cp $defs{CERTS_DIR}/$manifest_file $defs{CERTS_DIR}/$compat_manifest_file");
 print "    Manifest: $defs{CERTS_DIR}/$manifest_file\n";
+print "    Compat manifest: $defs{CERTS_DIR}/$compat_manifest_file\n";
 
 exit 0;
 
