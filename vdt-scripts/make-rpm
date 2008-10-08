@@ -127,7 +127,7 @@ sub read_defs {
     my %tmp;
     foreach my $line (@lines) {
         my ($key, $value) = split /\s*=\s*/, $line, 2;
-        next unless($key && $value);
+        next unless($key && defined($value));
         $value =~ s/\$\(([^\)]+)\)/$tmp{$1}/g;
         $tmp{$key} = $value;
     }
