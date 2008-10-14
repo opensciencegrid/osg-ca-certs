@@ -52,9 +52,15 @@ close(OUT);
 ## Do other work
 ##
 
+# Make the manifest and RPM
 system("cd ..; ./make-manifest");
 system("./make-rpm");
+
+# Copy files to the web, and create a symlink for latest file.
+my $latest_release_file = "$vars{ROOT}/releases/certs/ca_index-latest.txt";
 system("cp ../certificates/INDEX.txt $vars{ROOT}/releases/certs/ca_index-$vars{OUR_CERTS_MAJOR_VERSION}.txt");
+unlink($latest_release_file) if(-e $latest_release_file);
+system("ln -s $vars{ROOT}/releases/certs/ca_index-$vars{OUR_CERTS_MAJOR_VERSION}.txt $latest_release_file");
 system("cp ../certificates/CHANGES $vars{ROOT}/releases/certs/ca_changes.txt");
 
 
