@@ -76,7 +76,6 @@ d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid       
 d1737728  NGO-Netrust                       http://www.netrust.net                              I
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            IT
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
-d2a353a5  Pakistan - PK Grid CA             http://www.ncp.edu.pk/pk-grid-ca/                   I
 dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                                 I
 e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/                             I
 e1fce4e9  Fermilab KCA CA                   https://computing.fnal.gov/security/pki/            I
