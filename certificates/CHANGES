@@ -1,5 +1,17 @@
 Changes to the VDT certificates package
 
+===== Version 43 =====
+Released on 14-Dec-2008
+
+Updated to IGTF 1.26
+  * Added accredited classic Indian Grid CA (da75f6a8)
+  * Updated IUCC root certificate with extended life time (6fee79b0)
+  * Updated BEGrid  and UCSD-PRAGMA URL metadata 
+  * New BEGrid2008 root certificate (e8d818e6)
+  * Extended life time of the SEE-GRID CA (468d15b3)
+  * Included CRL for NCSA SLCS CA (f2e89fe3)
+  * Temporally suspended NGO-Netrust CA (d1737728)
+
 ===== Version 42 =====
 Released on 8-Dec-2008
 

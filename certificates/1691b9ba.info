@@ -8,5 +8,5 @@ crl_url = http://www.grid.org.tr/ca/crl/crl.pem
 email = ca@grid.org.tr
 status = accredited:classic
 url = http://www.grid.org.tr/ca
-version = 1.25
+version = 1.26
 sha1fp.0 = FB:CE:94:CA:22:4B:B0:F5:98:D1:83:79:2F:6B:50:36:BD:9D:51:2D

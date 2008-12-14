@@ -73,13 +73,14 @@ cc800af0  Hungary - NIIF                    http://www.ca.niif.hu/              
 cf4ba8c8  France - CNRS (EDG Catch-all CA)  http://igc.services.cnrs.fr/                        I
 d0c2a341  Armenia - ArmeSFo                 http://www.escience.am/ca/                          I
 d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid                       I
-d1737728  NGO-Netrust                       http://www.netrust.net                              I
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            IT
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
+da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I
 dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                                 I
 e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/                             I
 e1fce4e9  Fermilab KCA CA                   https://computing.fnal.gov/security/pki/            I
 e36e7a72  Switzerland - SwissSign (Bronze)  http://swisssign.net/                               I
+e8d818e6  BEGrid2008                        https://gridra.begrid.be/                           I
 e9d08b40  Switzerland - SwissSign (Silver)  http://swisssign.net/                               I
 eebc7717  SWITCH-Server-2007                http://swisssign.net/                               I
 f2e89fe3  USA - NCSA SLCS                   http://security.ncsa.uiuc.edu/CA/                   I
@@ -88,5 +89,5 @@ fe102e03  Germany - DFN-GridGermany-Server  http://www.pca.dfn.de/              
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.25 http://www.gridpma.org/ 
+I: IGTF 1.26 http://www.gridpma.org/ 
 T: TeraGrid  http://security.teragrid.org/

@@ -5,5 +5,5 @@ ca_url = http://aegis-ca.rcub.bg.ac.yu/repository/ca.pem
 crl_url = http://aegis-ca.rcub.bg.ac.yu/repository/crl-v2.crl
 email = aegis-ca@aegis-ca.rcub.bg.ac.yu
 status = accredited:classic
-version = 1.25
+version = 1.26
 sha1fp.0 = 1B:60:CD:E5:50:72:B0:1E:96:42:86:42:CA:0C:D6:8E:F3:51:2B:DD
