@@ -8,5 +8,5 @@ url = http://ca.nordugrid.org/
 email = ca@nordugrid.org
 crl_url = http://ca.nordugrid.org/cacrl.crl
 status = accredited:classic
-version = 1.26
+version = 1.27
 sha1fp.0 = AB:BF:6E:46:01:F9:5B:36:22:B8:C2:76:C0:E3:30:3C:B4:6A:12:B5

@@ -7,5 +7,5 @@ url = http://www.begrid.be/index.php?module=webpage&id=14
 crl_url = http://gridra.belnet.be/cacrl.pem
 email = gridca@belnet.be
 status = accredited:classic
-version = 1.26
+version = 1.27
 sha1fp.0 = 76:D6:39:F7:6C:12:45:9B:DE:8D:0C:6F:32:51:39:D2:18:C2:4C:0D

@@ -6,5 +6,5 @@ crl_url = http://www.ncp.edu.pk/pk-grid-ca/2007/CRL/ncp.crl
 url = http://www.ncp.edu.pk/pk-grid-ca/
 email = pkgrid-ca@ncp.edu.pk
 status = accredited:classic
-version = 1.26
+version = 1.27
 sha1fp.0 = AB:BC:65:79:33:A3:DF:AB:BA:25:C8:DE:E9:3F:C7:9E:4A:BA:7A:F5

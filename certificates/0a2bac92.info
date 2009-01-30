@@ -8,5 +8,5 @@ ca_url = https://brgridca.ic.uff.br/certs/cacert.txt
 crl_url = http://brgridca.ic.uff.br/crl/cacrl.pem
 email = brgridca@ic.uff.br
 status = accredited:classic
-version = 1.26
+version = 1.27
 sha1fp.0 = EB:E5:93:4D:04:8F:A0:72:A3:01:71:CB:43:57:E6:CD:FC:59:DF:BD

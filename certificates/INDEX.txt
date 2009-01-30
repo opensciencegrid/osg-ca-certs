@@ -1,11 +1,13 @@
 Hash      Source                            More Information                                    Source
 --------------------------------------------------------------------------------------------------------
 03aa0ecb  Belgium - BeGrid                  https://gridra.belnet.be/pub/                       I
+09ff08b7  CNRS-Projets                      http://igc.services.cnrs.fr/GRID-FR/                I
 0a12b607  UGrid - Ukraine                   https://ca.ugrid.org/                               I
 0a2bac92  Brazil - BrGrid                   https://brgridca.ic.uff.br/                         I
 1149214e  Germany - DFN-GridGermany-Root    http://www.pca.dfn.de/                              I
 11b4a5a2  Portugal - LIPCA                  http://ca.lip.pt/                                   I
 12a1d8c2  France - GRID-FR                  http://igc.services.cnrs.fr/GRID-FR/                I
+163af95c  CNRS2                             http://igc.services.cnrs.fr/GRID-FR/                I
 1691b9ba  Turkey - TRGrid                   http://www.grid.org.tr/ca/                          I
 16da7552  The Netherlands - NIKHEF          http://certificate.nikhef.nl/                       I
 1c3f2ca8  USA - DOE Grids                   http://www.doegrids.org/                            IT
@@ -34,7 +36,6 @@ Hash      Source                            More Information                    
 47d3d1a0  SWITCH-Personal-2007              http://swisssign.net                                I
 4a6cd8b1  USA - NCSA                        http://security.ncsa.uiuc.edu/CA/                   T
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
-566bf40f  Estonia - Estonian Grid           http://grid.eenet.ee/                               I
 5e5501f3  Hungary - KFKI RMKI               http://pki.kfki.hu/                                 I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
 67e8acfa  Purdue TeraGrid RA                http://tg-ca.purdue.teragrid.org:8080/ejbca/        T
@@ -65,6 +66,7 @@ b2771d44  China - CNIC Grid CA              http://ca.grid.cn/en/               
 b7bcb7b2  Argentina - UNPL Grid CA          https://www.pkigrid.unlp.edu.ar/                    I
 b89793e4  NPACI                             http://www.npaci.edu/CA/                            T
 ba2f39ca  China - IHEP                      https://gridca.ihep.ac.cn/                          I
+b93d6240  NERSC SLCS CA                     http://certs.nersc.gov/                             I
 bffbd7d0  GridCanada                        http://www.gridcanada.ca/ca                         I
 ce33db76  IRAN-GRID                         http://cagrid.ipm.ac.ir/                            I
 c4435d12  Switzerland - SwissSign (SWITCH)  http://swisssign.net/                               I
@@ -73,6 +75,7 @@ cc800af0  Hungary - NIIF                    http://www.ca.niif.hu/              
 cf4ba8c8  France - CNRS (EDG Catch-all CA)  http://igc.services.cnrs.fr/                        I
 d0c2a341  Armenia - ArmeSFo                 http://www.escience.am/ca/                          I
 d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid                       I
+d11f973e  CNRS2-Grid-FR                     http://igc.services.cnrs.fr/GRID-FR/                I
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            IT
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
 da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I
@@ -89,5 +92,5 @@ fe102e03  Germany - DFN-GridGermany-Server  http://www.pca.dfn.de/              
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.26 http://www.gridpma.org/ 
+I: IGTF 1.27 http://www.gridpma.org/ 
 T: TeraGrid  http://security.teragrid.org/

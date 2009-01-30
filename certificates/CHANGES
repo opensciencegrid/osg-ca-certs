@@ -1,5 +1,17 @@
 Changes to the VDT certificates package
 
+===== Version 44 =====
+Released on 30-Jan-2009
+
+Updated to IGTF 1.27
+  * Corrected signing namespace for BEGrid2008 CA (e8d818e6)
+  * Added NERSC SLCS CA (b93d6240)
+  * ASGCCA-2007 changed signature algorithm from MD5 to SHA1 (9cd75e87)
+  * Added new CNRS2 hierarchy: CNRS2 (163af95c) -> CNRS2-Projets
+    (09ff08b7) -> CNRS2-Grid-FR (d11f973e)
+  * Updated IUCC root certificate (6fee79b0)
+  * Removed EstonianGrid CA (566bf40f)
+
 ===== Version 43 =====
 Released on 14-Dec-2008
 

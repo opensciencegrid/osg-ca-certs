@@ -7,5 +7,5 @@ url = http://ups.savba.sk/ca
 email = ca.ui@sav.sk
 crl_url = http://ups.savba.sk/ca/slovakgrid.crl
 status = accredited:classic
-version = 1.26
+version = 1.27
 sha1fp.0 = 1F:93:C4:B6:AE:18:56:87:A1:A9:64:CC:04:CA:56:9F:10:CB:F5:58
