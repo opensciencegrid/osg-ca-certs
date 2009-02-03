@@ -1,5 +1,23 @@
 Changes to the VDT certificates package
 
+===== Version 45 =====
+Release on 03-Feb-2009
+
+Removed CAs that are not IGTF accredited, except for FNAL KCA. The
+removed CAs are:
+  * Pittsburgh Supercomputing Center Kerberos CA (290a3b29)
+  * San Diego Supercompuing Center CA (3deda549)
+  * NCSA (4a6cd8b1)
+  * Purdue TeraGrid RA (67e8acfa)
+  * Purdue CA (95009ddc)
+  * TACC (9a1da9f9)
+  * Pittsburgh Supercomputing Center Root CA (9b88e95b)
+  * Pittsburgh Supercomputing Center Hosts CA (acc06fda)
+  * NPACI (b89793e4)
+
+We are retaining the FNAL KCA because we expect it to be accredited
+shortly and because it is in use by VDT clients. 
+
 ===== Version 44 =====
 Released on 30-Jan-2009
 
