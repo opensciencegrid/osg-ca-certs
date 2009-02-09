@@ -1,7 +1,15 @@
 Changes to the VDT certificates package
 
+===== Version 46 =====
+Released on 9-Feb-2009
+
+Version 44 is based on IGTF 1.27. When we received IGTF 1.27, the URL
+for the CRL for the NERSC SLCS CA incorrect. IGTF 1.27 was
+subsequently updated with the correct URL, and this release includes
+it. There are no other changes. 
+
 ===== Version 45 =====
-Release on 03-Feb-2009
+Released on 3-Feb-2009
 
 Removed CAs that are not IGTF accredited, except for FNAL KCA. The
 removed CAs are:
