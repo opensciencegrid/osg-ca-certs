@@ -29,15 +29,18 @@ Hash      Source                            More Information                    
 367b75c3  UK eScience CA 2007               http://www.grid-support.ac.uk/ca/                   I
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
 3d5be7bc  Slovenia - SiGNET CA              http://signet-ca.ijs.si/                            I
+3f0f4285  Venezuela - ULAGrid CA            http://ra.cecalc.ula.ve                             I
 71a89a47  NCHC                              http://ca.goc.nchc.org.tw/                          I
 468d15b3  Balkans - SeeGrid                 http://www.grid.auth.gr/pki/seegrid-ca/             I
 47d3d1a0  SWITCH-Personal-2007              http://swisssign.net                                I
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
 5e5501f3  Hungary - KFKI RMKI               http://pki.kfki.hu/                                 I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
+684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
 6fee79b0  Israel - IUCC                     http://certificate.iucc.ac.il/                      I
 722e5071  Korea - KISTI 2007                http://ca.gridcenter.or.kr/                         I
+742edd45  Latvia - LatGrid                  http://grid.lumii.lv/?lang=en                       I
 7721d4d3  PRAGMA-UCSD                       http://goc.pragma-grid.net/ca/                      I
 7b2d086c  Switzerland - SwissSign (Root)    http://swisssign.net/                               I
 7b54708e  Morocco: MAGrid CA                http://www.magrid.ma/ca                             I
@@ -74,6 +77,7 @@ dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                 
 e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/                             I
 e1fce4e9  Fermilab KCA CA                   https://computing.fnal.gov/security/pki/            I
 e36e7a72  Switzerland - SwissSign (Bronze)  http://swisssign.net/                               I
+e5cc84c2  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 e8d818e6  BEGrid2008                        https://gridra.begrid.be/                           I
 e9d08b40  Switzerland - SwissSign (Silver)  http://swisssign.net/                               I
 eebc7717  SWITCH-Server-2007                http://swisssign.net/                               I
@@ -83,5 +87,5 @@ fe102e03  Germany - DFN-GridGermany-Server  http://www.pca.dfn.de/              
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.27 http://www.gridpma.org/ 
+I: IGTF 1.28 http://www.gridpma.org/ 
 

@@ -7,5 +7,5 @@ ca_url = https://ca.austriangridca.at/certs/cacert.pem
 crl_url = http://ca.austriangridca.at/crl/crl.pem
 email = ca@austriangrid.at
 status = accredited:classic
-version = 1.27
+version = 1.28
 sha1fp.0 = A5:3C:9B:3E:CE:2E:B8:B1:33:C7:9F:3A:5C:86:53:12:77:28:42:FE

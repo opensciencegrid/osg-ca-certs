@@ -6,6 +6,6 @@ alias = CNRS-Projets
 crl_url = http://crls.services.cnrs.fr/CNRS-Projets/getpem.crl
 requires = CNRS
 status = accredited:classic
-version = 1.27
+version = 1.28
 email = alice.de-bignicourt@urec.cnrs.fr
 sha1fp.0 = D2:C5:3C:9C:DB:34:5E:8E:A6:6E:56:A2:D3:4D:E1:58:82:CA:96:73

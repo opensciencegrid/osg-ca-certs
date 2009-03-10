@@ -1,9 +1,21 @@
 Changes to the VDT certificates package
 
+===== Version 47 =====
+Released on 10-Mar-2009
+
+Updated to IGTF 1.28
+  * Added accredited classic ULAGrid CA (3f0f4285)
+  * Added accredited TACC Root (684261aa) and TACC Classic CAs (e5cc84c2)
+  * Updated NERSC (b93d6240) CRL URL download location
+  * Updated DOEGrids (1c3f2ca8) CRL URL download location
+  * Extended life time of NorduGrid CA (1f0e8352) 
+  * Added SigmaNet CALG CA (742edd45)
+  * Updated AEGIS CA root certificate (393f7863) to reflect TLD 
+
 ===== Version 46 =====
 Released on 9-Feb-2009
 
-Version 44 is based on IGTF 1.27. When we received IGTF 1.27, the URL
+Version 46 is based on IGTF 1.27. When we received IGTF 1.27, the URL
 for the CRL for the NERSC SLCS CA incorrect. IGTF 1.27 was
 subsequently updated with the correct URL, and this release includes
 it. There are no other changes. 

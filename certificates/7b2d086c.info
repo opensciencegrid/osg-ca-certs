@@ -7,5 +7,5 @@ ca_url = http://swisssign.net/cgi-bin/authority/download?into=save_as_pem&ca=96D
 crl_url = http://crl.swisssign.net/96D771CD392AD4FC88B18AAB537869EF8F477E16
 email = pki@switch.ch
 status = accredited:classic
-version = 1.27
+version = 1.28
 sha1fp.0 = 56:4B:6F:8C:56:38:DC:05:5B:BA:2B:A1:39:0F:7E:31:95:4A:55:50
