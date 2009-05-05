@@ -8,5 +8,5 @@ ca_url = http://grid.lumii.lv/uploads/ca-cert.pem
 url = http://grid.lumii.lv/?lang=en
 email = dana.ludviga@lumii.lv
 status = accredited:classic
-version = 1.28
+version = 1.29
 sha1fp.0 = 1E:54:9B:D1:23:22:F2:12:6F:14:16:C4:2C:21:DA:59:3E:F3:78:0B

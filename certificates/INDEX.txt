@@ -32,6 +32,7 @@ Hash      Source                            More Information                    
 3f0f4285  Venezuela - ULAGrid CA            http://ra.cecalc.ula.ve                             I
 71a89a47  NCHC                              http://ca.goc.nchc.org.tw/                          I
 468d15b3  Balkans - SeeGrid                 http://www.grid.auth.gr/pki/seegrid-ca/             I
+4798da47  HKU                               http://ca.grid.hku.hk/                              I
 47d3d1a0  SWITCH-Personal-2007              http://swisssign.net                                I
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
 5e5501f3  Hungary - KFKI RMKI               http://pki.kfki.hu/                                 I
@@ -39,6 +40,7 @@ Hash      Source                            More Information                    
 684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
 6fee79b0  Israel - IUCC                     http://certificate.iucc.ac.il/                      I
+709bed08  BYGCA                             http://ca.grid.by/                                  I
 722e5071  Korea - KISTI 2007                http://ca.gridcenter.or.kr/                         I
 742edd45  Latvia - LatGrid                  http://grid.lumii.lv/?lang=en                       I
 7721d4d3  PRAGMA-UCSD                       http://goc.pragma-grid.net/ca/                      I
@@ -51,8 +53,9 @@ Hash      Source                            More Information                    
 98ef0ee5  UK eScience Root CA 2007          http://www.grid-support.ac.uk/ca/                   I
 9b59ecad  Czech Republic - CESNET           http://www.cesnet.cz/pki/                           I
 9b95bbf2  USA - NCSA MICS                   http://security.ncsa.uiuc.edu/CA/                   I
-9cd75e87  Academia Sinica Grid CA 2007       http://ca.grid.sinica.edu.tw/                      I
+9cd75e87  Academia Sinica Grid CA 2007      http://ca.grid.sinica.edu.tw/                       I
 9dd23746  pkIRISGRID                        http://www.irisgrid.es/pki/                         I
+9ff26ea4  MD-Grid                           http://ca.grid.md/                                  I
 a317c467  Japan - AIST                      https://www.apgrid.org/CA/AIST/Production/          I
 a87d9192  Japan - NAREGI                    https://www.naregi.org/ca/                          I
 a9082267  Latin American and Caribbean Catch-all Grid CA http://lacgridca.ic.uff.br/            I
@@ -70,6 +73,7 @@ cf4ba8c8  France - CNRS (EDG Catch-all CA)  http://igc.services.cnrs.fr/        
 d0c2a341  Armenia - ArmeSFo                 http://www.escience.am/ca/                          I
 d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid                       I
 d11f973e  CNRS2-Grid-FR                     http://igc.services.cnrs.fr/GRID-FR/                I
+d1737728  NGO-Netrust                       http://netrustconnector.netrust.net/                I
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            I
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
 da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I

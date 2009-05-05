@@ -1,5 +1,16 @@
 Changes to the VDT certificates package
 
+===== Version 48 =====
+Released on 05-May-2009
+
+Updated to IGTF 1.29
+  * Added accredited HKU CA (4798da47)
+  * Added accredited BYGCA (709bed08)
+  * Added accredited MD-Grid (9ff26ea4)
+  * Added accredited NGO-Netrust (d1737728)
+  * Updated Japan - AIST (a317c467) CRL URL download location
+  * Updated APAC (1e12d831) signing policy and namespace
+
 ===== Version 47 =====
 Released on 10-Mar-2009
 

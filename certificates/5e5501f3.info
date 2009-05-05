@@ -8,5 +8,5 @@ crl_url = http://pki.kfki.hu/pki0/pub/crl/cacrl.crl
 email = kadlec@sunserv.kfki.hu
 status = accredited:classic
 url = http://pki.kfki.hu/
-version = 1.28
+version = 1.29
 sha1fp.0 = 75:5C:C0:6E:E4:E8:F0:EA:EE:44:AE:85:2F:DE:60:3E:BD:CE:84:40
