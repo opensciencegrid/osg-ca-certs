@@ -91,5 +91,5 @@ fe102e03  Germany - DFN-GridGermany-Server  http://www.pca.dfn.de/              
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.28 http://www.gridpma.org/ 
+I: IGTF 1.29 http://www.gridpma.org/ 
 
