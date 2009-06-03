@@ -1,5 +1,17 @@
 Changes to the VDT certificates package
 
+===== Version 49 =====
+Released on 03-Jun-2009
+
+Updated to IGTF 1.30
+  * Updated contact meta-data for BYGCA (709bed08)
+  * Updated URLs for DFN Grid PKI public web pages (1149214e, 34f8e29c, fe102e03)
+  * Added accredited NCSA GridShib SLCS CA (e8ac4b61)
+  * Added accredited DFN SLCS CA (a02131f7)
+  * Added accredited TACC MICS CA (2ac09305)
+  * Added accredited SWITCH (QuoVadis anchored) CAs (5cf9d536, e72045ce)
+  * Added accredited FNAL-SLCS CA (99f9f5a3)
+
 ===== Version 48 =====
 Released on 05-May-2009
 

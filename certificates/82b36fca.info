@@ -9,6 +9,6 @@ url = http://www.grid.auth.gr/pki/hellasgrid-ca-2006/
 crl_url = http://crl.grid.auth.gr/hellasgrid-ca-2006/82b36fca.pem 
 email = contact@grid.auth.gr
 status = accredited:classic
-version = 1.29
+version = 1.30
 sha1fp.0 = D7:ED:2D:0A:E8:67:B7:F5:AD:77:1B:C9:BF:1D:6B:95:A1:56:5A:AB
 

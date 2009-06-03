@@ -21,6 +21,7 @@ Hash      Source                            More Information                    
 28a58577  Greece - HellasGrid (Root 2006)   http://www.grid.auth.gr/pki/hellasgrid-root-ca-2006/ I
 295adc19  Chile - REUNA CA                  http://reuna-ca.reuna.cl/                           I
 2a237f16  Baltic States - Baltic Grid CA    http://ca.balticgrid.org/                           I
+2ac09305  TACC MICS                         http://www.tacc.utexas.edu/CA/                      I
 2f3fadf6  INFN                              http://security.fi.infn.it/CA/                      I
 304cf809  SWITCHslcs                        http://www.switch.ch/pki/grid                       I
 3232b9bc  MREN - Montenegro                 http://mren-ca.ac.me/                               I
@@ -35,6 +36,7 @@ Hash      Source                            More Information                    
 4798da47  HKU                               http://ca.grid.hku.hk/                              I
 47d3d1a0  SWITCH-Personal-2007              http://swisssign.net                                I
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
+5cf9d536  QuoVadis-Root-CA1                 http://www.switch.ch/pki/                           I
 5e5501f3  Hungary - KFKI RMKI               http://pki.kfki.hu/                                 I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
 684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
@@ -51,11 +53,13 @@ Hash      Source                            More Information                    
 8a047de1  NECTEC GOC                        http://gridca.hpcc.nectec.or.th/                    I
 8a661490  Poland - PolishGrid               http://www.man.poznan.pl/plgrid-ca/                 I
 98ef0ee5  UK eScience Root CA 2007          http://www.grid-support.ac.uk/ca/                   I
+99f9f5a3  FNAL SLCS                         ttp://security.fnal.gov/cookbook/TrustingCertificates.html I
 9b59ecad  Czech Republic - CESNET           http://www.cesnet.cz/pki/                           I
 9b95bbf2  USA - NCSA MICS                   http://security.ncsa.uiuc.edu/CA/                   I
 9cd75e87  Academia Sinica Grid CA 2007      http://ca.grid.sinica.edu.tw/                       I
 9dd23746  pkIRISGRID                        http://www.irisgrid.es/pki/                         I
 9ff26ea4  MD-Grid                           http://ca.grid.md/                                  I
+a02131f7  DFN-SLCS                          http://www.pki.dfn.de/index.php?id=slcs             I
 a317c467  Japan - AIST                      https://www.apgrid.org/CA/AIST/Production/          I
 a87d9192  Japan - NAREGI                    https://www.naregi.org/ca/                          I
 a9082267  Latin American and Caribbean Catch-all Grid CA http://lacgridca.ic.uff.br/            I
@@ -82,6 +86,8 @@ e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/             
 e1fce4e9  Fermilab KCA CA                   https://computing.fnal.gov/security/pki/            I
 e36e7a72  Switzerland - SwissSign (Bronze)  http://swisssign.net/                               I
 e5cc84c2  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
+e72045ce  SWITCH-QuoVadis-Grid-ICA          http://www.switch.ch/grid/certificates/             I
+e8ac4b61  NCSA GridShib CA                  http://security.ncsa.uiuc.edu/CA/                   I
 e8d818e6  BEGrid2008                        https://gridra.begrid.be/                           I
 e9d08b40  Switzerland - SwissSign (Silver)  http://swisssign.net/                               I
 eebc7717  SWITCH-Server-2007                http://swisssign.net/                               I
