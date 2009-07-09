@@ -1,5 +1,12 @@
 Changes to the VDT certificates package
 
+===== Version 50 =====
+Released on 09-Jul-2009
+
+Removed two expired CA certificates:
+  * DFN-Verein User CA Grid - G01 (34f8e29c)
+  * DFN-Verein Server CA Grid - G01 (fe102e03)
+
 ===== Version 49 =====
 Released on 03-Jun-2009
 

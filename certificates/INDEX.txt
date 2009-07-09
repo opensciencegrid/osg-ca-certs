@@ -26,7 +26,6 @@ Hash      Source                            More Information                    
 304cf809  SWITCHslcs                        http://www.switch.ch/pki/grid                       I
 3232b9bc  MREN - Montenegro                 http://mren-ca.ac.me/                               I
 34a509c3  France - CNRS-Projets             http://igc.services.cnrs.fr/                        I
-34f8e29c  Germany - DFN-GridGermany-User    http://www.pca.dfn.de/                              I
 367b75c3  UK eScience CA 2007               http://www.grid-support.ac.uk/ca/                   I
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
 3d5be7bc  Slovenia - SiGNET CA              http://signet-ca.ijs.si/                            I
@@ -93,9 +92,8 @@ e9d08b40  Switzerland - SwissSign (Silver)  http://swisssign.net/               
 eebc7717  SWITCH-Server-2007                http://swisssign.net/                               I
 f2e89fe3  USA - NCSA SLCS                   http://security.ncsa.uiuc.edu/CA/                   I
 f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/                   I
-fe102e03  Germany - DFN-GridGermany-Server  http://www.pca.dfn.de/                              I
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.29 http://www.gridpma.org/ 
+I: IGTF 1.30 http://www.gridpma.org/ 
 
