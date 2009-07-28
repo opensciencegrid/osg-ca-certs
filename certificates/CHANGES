@@ -1,5 +1,13 @@
 Changes to the VDT certificates package
 
+===== Version 51 =====
+Released on 28-Jul-2009
+
+Updated to IGTF 1.31:
+  * Removed BEGrid CA (03aa0ecb)
+  * IGTF 1.31 also removed the two DFN CAs that we previously removed
+    in version 50.
+
 ===== Version 50 =====
 Released on 09-Jul-2009
 

@@ -1,6 +1,5 @@
 Hash      Source                            More Information                                    Source
 --------------------------------------------------------------------------------------------------------
-03aa0ecb  Belgium - BeGrid                  https://gridra.belnet.be/pub/                       I
 09ff08b7  CNRS-Projets                      http://igc.services.cnrs.fr/GRID-FR/                I
 0a12b607  UGrid - Ukraine                   https://ca.ugrid.org/                               I
 0a2bac92  Brazil - BrGrid                   https://brgridca.ic.uff.br/                         I
@@ -95,5 +94,5 @@ f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/   
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.30 http://www.gridpma.org/ 
+I: IGTF 1.31 http://www.gridpma.org/ 
 

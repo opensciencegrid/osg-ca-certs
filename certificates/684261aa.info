@@ -8,5 +8,5 @@ crl_url = http://www.tacc.utexas.edu/CA/684261aa.r0
 email = ca@tacc.utexas.edu
 status = accredited:classic
 url = http://www.tacc.utexas.edu/CA/
-version = 1.30
+version = 1.31
 sha1fp.0 = 15:2D:FC:BA:13:11:2C:F5:65:53:AC:94:5F:89:2C:B0:E5:F6:BA:A8

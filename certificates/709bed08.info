@@ -7,5 +7,5 @@ crl_url = http://ca.grid.by/bygca-crl.crl
 email = ca@newman.bas-net.by
 status = accredited:classic
 url = http://ca.grid.by/
-version = 1.30
+version = 1.31
 sha1fp.0 = 33:D6:1F:E9:AF:6F:98:D4:89:27:C1:AA:88:0E:8F:4B:66:0B:A2:72

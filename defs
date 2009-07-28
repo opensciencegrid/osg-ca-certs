@@ -3,9 +3,9 @@
 #       VAR *must* be defined above where it is used, or it will not be substituted
 
 # Certificate distribution version information
-OUR_CERTS_MAJOR_VERSION = 50
+OUR_CERTS_MAJOR_VERSION = 51
 OUR_CERTS_MINOR_VERSION = 1
-IGTF_CERTS_VERSION = 1.30
+IGTF_CERTS_VERSION = 1.31
 CERTS_DESCRIPTION = v$(OUR_CERTS_MAJOR_VERSION) (includes IGTF $(IGTF_CERTS_VERSION) CAs)
 
 # Locations

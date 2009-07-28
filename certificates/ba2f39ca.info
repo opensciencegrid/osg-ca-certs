@@ -8,5 +8,5 @@ crl_url = http://gridca.ihep.ac.cn/cacrl.pem
 email = gridca@ihep.ac.cn
 status = accredited:classic
 url = https://gridca.ihep.ac.cn/
-version = 1.30
+version = 1.31
 sha1fp.0 = A8:44:99:DE:0E:EA:A3:68:BF:4A:29:15:BD:D7:C0:59:B6:04:FB:BB
