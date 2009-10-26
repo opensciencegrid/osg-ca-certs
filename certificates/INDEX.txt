@@ -32,10 +32,8 @@ Hash      Source                            More Information                    
 71a89a47  NCHC                              http://ca.goc.nchc.org.tw/                          I
 468d15b3  Balkans - SeeGrid                 http://www.grid.auth.gr/pki/seegrid-ca/             I
 4798da47  HKU                               http://ca.grid.hku.hk/                              I
-47d3d1a0  SWITCH-Personal-2007              http://swisssign.net                                I
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
 5cf9d536  QuoVadis-Root-CA1                 http://www.switch.ch/pki/                           I
-5e5501f3  Hungary - KFKI RMKI               http://pki.kfki.hu/                                 I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
 684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
@@ -44,7 +42,6 @@ Hash      Source                            More Information                    
 722e5071  Korea - KISTI 2007                http://ca.gridcenter.or.kr/                         I
 742edd45  Latvia - LatGrid                  http://grid.lumii.lv/?lang=en                       I
 7721d4d3  PRAGMA-UCSD                       http://goc.pragma-grid.net/ca/                      I
-7b2d086c  Switzerland - SwissSign (Root)    http://swisssign.net/                               I
 7b54708e  Morocco: MAGrid CA                http://www.magrid.ma/ca                             I
 7d0d064a  MARGI - Macedonia                 http://www.margi-ca.marnet.net.mk                   I
 82b36fca  Greece - HellasGrid (2006)        http://www.grid.auth.gr/pki/hellasgrid-root-ca-2006/ I
@@ -68,7 +65,6 @@ ba2f39ca  China - IHEP                      https://gridca.ihep.ac.cn/          
 b93d6240  NERSC SLCS CA                     http://certs.nersc.gov/                             I
 bffbd7d0  GridCanada                        http://www.gridcanada.ca/ca                         I
 ce33db76  IRAN-GRID                         http://cagrid.ipm.ac.ir/                            I
-c4435d12  Switzerland - SwissSign (SWITCH)  http://swisssign.net/                               I
 c48c63f3  China - CNIC SDG CA               http://ca.sdg.grid.cn/en/                           I
 cc800af0  Hungary - NIIF                    http://www.ca.niif.hu/                              I
 cf4ba8c8  France - CNRS (EDG Catch-all CA)  http://igc.services.cnrs.fr/                        I
@@ -82,17 +78,14 @@ da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/           
 dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                                 I
 e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/                             I
 e1fce4e9  Fermilab KCA CA                   https://computing.fnal.gov/security/pki/            I
-e36e7a72  Switzerland - SwissSign (Bronze)  http://swisssign.net/                               I
 e5cc84c2  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 e72045ce  SWITCH-QuoVadis-Grid-ICA          http://www.switch.ch/grid/certificates/             I
 e8ac4b61  NCSA GridShib CA                  http://security.ncsa.uiuc.edu/CA/                   I
 e8d818e6  BEGrid2008                        https://gridra.begrid.be/                           I
-e9d08b40  Switzerland - SwissSign (Silver)  http://swisssign.net/                               I
-eebc7717  SWITCH-Server-2007                http://swisssign.net/                               I
 f2e89fe3  USA - NCSA SLCS                   http://security.ncsa.uiuc.edu/CA/                   I
 f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/                   I
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.31 http://www.gridpma.org/ 
+I: IGTF 1.32 http://www.gridpma.org/ 
 

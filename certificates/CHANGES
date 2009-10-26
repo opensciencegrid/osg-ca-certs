@@ -1,5 +1,22 @@
 Changes to the VDT certificates package
 
+===== Version 52 =====
+Released on 26-Oct-2009
+
+Updated to IGTF 1.32:
+  * Updated country TLD in URLs and email for AEGIS CA (393f7863) 
+  * Updated contact information for CALC CA (742edd45)
+  * Extended life time and updated profile or TR-Grid CA cert and CRL 
+    URL (1691b9ba)
+  * Updated and added references to CP and CPS documents for the
+    following authorities: HellasGrid (82b36fca), ROSA (1f3834d0),
+    DutchGrid (16da7552), IRAN-GRID (ce33db76), BYGCA (709bed08)
+  * Withdrawn obsolete CAs SWITCH-Personal-2007 (47d3d1a0),
+    SwissSign-Root (7b2d086c), SWITCH (c4435d12), SwissSign-Bronze
+    (e36e7a72), SwissSign-Silver (e9d08b40), SWITCH-Server-2007
+    (eebc7717) 
+  * Withdrawn expired and discontinued CA RMKI (5e5501f3)
+
 ===== Version 51 =====
 Released on 28-Jul-2009
 
