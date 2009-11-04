@@ -55,6 +55,7 @@ close(OUT);
 # Make the manifest and RPM
 system("cd ..; ./make-manifest");
 system("./make-rpm");
+system('PATH=/p/condor/workspaces/vdt/debian-build-tools/bin:$PATH ./make-deb');
 
 # Copy files to the web, and create a symlink for latest file.
 my $latest_release_file = "$vars{ROOT}/releases/certs/ca_index-latest.txt";

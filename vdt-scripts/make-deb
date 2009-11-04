@@ -1,0 +1,128 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use File::Path qw(mkpath rmtree);
+use File::Copy;
+use FileHandle;
+use POSIX qw(strftime);
+use VDT::Defs;
+
+# initialize some globals
+my %DEFS = %{read_defs('../defs')};
+chomp(my $RUN_DIR = `pwd`);
+my $ROOT_DIR_BASENAME = 'debian';
+my $ROOT_DIR = "$RUN_DIR/$ROOT_DIR_BASENAME";
+my $META_DIR = "$ROOT_DIR/DEBIAN";
+my $GRID_SECURITY_DIR = "$ROOT_DIR/etc/grid-security";
+my $DEB_PACKAGE = 'vdt-ca-certificates';
+my $DEB_VERSION = "$DEFS{OUR_CERTS_MAJOR_VERSION}.$DEFS{OUR_CERTS_MINOR_VERSION}-1";
+my $DEB_FILENAME = "${DEB_PACKAGE}_${DEB_VERSION}.deb";
+my $INSTALL_DIR = '/p/vdt/public/html/debian/binary/cacerts';
+
+# check for Debian commands
+my @missing_debian_commands;
+push(@missing_debian_commands, 'dpkg-deb') unless system('dpkg-deb --version >/dev/null 2>&1') == 0;
+push(@missing_debian_commands, 'fakeroot') unless system('fakeroot --version >/dev/null 2>&1') == 0;
+if (@missing_debian_commands) {
+    print 'make-deb: Missing the following Debian ';
+    print ((scalar(@missing_debian_commands) > 1) ? 'commands' : 'command');
+    print ": " . join(', ', @missing_debian_commands);
+    print "\nPlease ensure that dpkg-deb and fakeroot are in PATH and try again.\n";
+    exit 1;
+}
+
+print "Making a Debian binary package of $DEFS{TARBALL_PATH}...\n";
+print "    Certificates version: $DEFS{OUR_CERTS_MAJOR_VERSION}\n";
+print "    Certificates release: $DEFS{OUR_CERTS_MINOR_VERSION}\n";
+
+# initialize directories
+rmtree($ROOT_DIR); # start fresh
+mkpath($META_DIR);
+mkpath($GRID_SECURITY_DIR);
+
+# unpack certificate tarball
+print "    Unpacking certificate tarball...\n";
+chdir($GRID_SECURITY_DIR);
+system("tar xzf $DEFS{TARBALL_PATH}");
+
+# create a control file
+my $control = <<EOF;
+Package: $DEB_PACKAGE
+Version: $DEB_VERSION
+Section: misc
+Priority: extra
+Architecture: all
+Maintainer: VDT Team <vdt-support\@opensciencegrid.org>
+Description: CA certificates from the VDT
+ Contains CA certificates distributed as a convenience by the VDT.
+ They are based on IGTF release $DEFS{IGTF_CERTS_VERSION}.
+ The VDT distributes these CA certificates as a matter of convenience;
+ we make no assurances that they are good, useful, or right for your site.
+EOF
+my $control_fh = new FileHandle("$META_DIR/control", 'w');
+if (not defined $control_fh) {
+    print "\nERROR: Could not create '$META_DIR/control': $!\n";
+    exit 1;
+}
+print $control_fh $control;
+undef $control_fh; # automatically closes file
+
+# create a changelog file
+chomp(my $timestamp = `date -R`);
+my $changelog = <<EOF;
+$DEB_PACKAGE ($DEB_VERSION) experimental; urgency=low
+
+  * Change details maintained on the VDT website:
+    http://vdt.cs.wisc.edu/certificate_authorities.html
+
+ -- VDT Team <vdt-support\@opensciencegrid.org>  $timestamp
+EOF
+my $changelog_fh = new FileHandle("$META_DIR/changelog", 'w');
+if (not defined $changelog_fh) {
+    print "\nERROR: Could not create '$META_DIR/changelog': $!\n";
+    exit 1;
+}
+print $changelog_fh $changelog;
+undef $changelog_fh; # automatically closes file
+
+# create a copyright file
+my $copyright = <<EOF;
+This package was created by the VDT <vdt-support\@opensciencegrid.org>
+on $timestamp.
+
+The packaging is Copyright (C) 2009, University of Wisconsin-Madison.
+
+ Licensed under the Apache License, Version 2.0 (the "License"); you
+ may not use this file except in compliance with the License.
+
+ On Debian systems, the complete text of the License can be found in
+ /usr/share/common-licenses/Apache-2.0.  Or, you may obtain a copy of
+ the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ implied.  See the License for the specific language governing
+ permissions and limitations under the License.
+EOF
+my $copyright_fh = new FileHandle("$META_DIR/copyright", 'w');
+if (not defined $copyright_fh) {
+    print "\nERROR: Could not create '$META_DIR/copyright': $!\n";
+    exit 1;
+}
+print $copyright_fh $copyright;
+undef $copyright_fh; # automatically closes file
+
+# make the deb file
+chdir($RUN_DIR);
+system("fakeroot dpkg-deb --build $ROOT_DIR_BASENAME $DEB_FILENAME");
+
+# clean up
+rmtree($ROOT_DIR);
+
+# install
+move($DEB_FILENAME, $INSTALL_DIR);
