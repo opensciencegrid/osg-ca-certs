@@ -7,59 +7,135 @@ use File::Path qw(mkpath rmtree);
 use File::Copy;
 use FileHandle;
 use POSIX qw(strftime);
+
+
+# Pick up VDT configuration values.  If not using the VDT defs file, comment out
+# the following two lines and check the configuration settings below carefully
+# to remove references to the DEFS hash.
 use VDT::Defs;
-
-# initialize some globals
 my %DEFS = %{read_defs('../defs')};
-chomp(my $RUN_DIR = `pwd`);
-my $ROOT_DIR_BASENAME = 'debian';
-my $ROOT_DIR = "$RUN_DIR/$ROOT_DIR_BASENAME";
-my $META_DIR = "$ROOT_DIR/DEBIAN";
-my $GRID_SECURITY_DIR = "$ROOT_DIR/etc/grid-security";
-my $DEB_PACKAGE = 'vdt-ca-certificates';
-my $DEB_VERSION = "$DEFS{OUR_CERTS_MAJOR_VERSION}.$DEFS{OUR_CERTS_MINOR_VERSION}-1";
-my $DEB_FILENAME = "${DEB_PACKAGE}_${DEB_VERSION}.deb";
-my $INSTALL_DIR = '/p/vdt/public/html/debian/binary/cacerts';
 
-# check for Debian commands
+
+# ==============================================================================
+# configuration settings
+# ==============================================================================
+
+# Path that contains your dpkg-deb and fakeroot commands.  Comment out if
+# dpkg-deb and fakeroot are already expected to be in PATH.
+my $DEBIAN_COMMAND_PATH = '/p/condor/workspaces/vdt/debian-build-tools/bin';
+
+# Path that contains the Dpkg.pm Perl module.  Comment out if Perl can already
+# find Dpkg.pm without help.
+my $DEBIAN_PERL_LIB = '/p/condor/workspaces/vdt/debian-build-tools/lib/perl5/vendor_perl/5.8.8';
+
+# The path to the CA certificates tarball on which the DEB file will be based.
+my $TARBALL_PATH = $DEFS{TARBALL_PATH};
+
+# The Debian package name for the CA certificates.  See:
+# http://www.debian.org/doc/debian-policy/ch-binary.html#s3.1
+my $DEB_PACKAGE = 'vdt-ca-certificates';
+
+# Three version numbers: One for the CA certificates themselves, and one for the
+# Debian packaging of them, and one for the IGTF distribution on which the DEB
+# file is based.  In most cases, the Debian revision should be '1'.
+my $CA_CERTIFICATES_VERSION = "$DEFS{OUR_CERTS_MAJOR_VERSION}.$DEFS{OUR_CERTS_MINOR_VERSION}";
+my $DEBIAN_REVISION = '1';
+my $IGTF_VERSION = $DEFS{IGTF_CERTS_VERSION};
+
+# The root of the APT repository.  Comment out if not using an APT repository.
+my $APT_REPOSITORY_ROOT = '/p/vdt/public/html/debian/apt';
+
+# Two pieces of APT repository metadata.  The origin string identifies who made
+# the package (i.e., your organization), and the label string is a general label
+# for the repository or package.  Only needed if using an APT repository.
+my $APT_ORIGIN = 'VDT Team';
+my $APT_LABEL = 'VDT CA certificate distribution';
+
+# Install directory for the DEB file itself.  If using an APT repository, give a
+# directory relative to the APT repository root defined above; otherwise, use an
+# absolute path to the install directory.
+my $INSTALL_DIR = 'certificates';
+
+# The Debian distribution under which the DEB file will be placed within the APT
+# repository.  Not needed unless using an APT repository.  See, e.g.:
+# http://www.debian.org/doc/manuals/repository-howto/repository-howto.en.html
+my $DEB_DISTRIBUTION = 'cacerts';
+
+# The Debian priority level for the CA certificates package.  See:
+# http://www.debian.org/doc/debian-policy/ch-archive.html#s-priorities
+my $DEB_PRIORITY = 'extra';
+
+# The Debian section in which to put the CA certificates package. See:
+# http://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections
+my $DEB_SECTION = 'misc';
+
+
+# ==============================================================================
+# initialization
+# ==============================================================================
+
+# let the user know that we are doing something
+print "Making a Debian binary package of $TARBALL_PATH...\n";
+print "    CA certificates version: $CA_CERTIFICATES_VERSION\n";
+print "    Debian package revision: $DEBIAN_REVISION\n";
+
+# globals
+chomp(my $RUN_DIR = `pwd`);
+my $WORKING_DIR_BASENAME = 'debian';
+my $WORKING_DIR_PATH = "$RUN_DIR/$WORKING_DIR_BASENAME";
+my $META_DIR = "$WORKING_DIR_PATH/DEBIAN";
+my $GRID_SECURITY_DIR = "$WORKING_DIR_PATH/etc/grid-security";
+my $DEB_VERSION = "${CA_CERTIFICATES_VERSION}-${DEBIAN_REVISION}";
+my $DEB_FILENAME = "${DEB_PACKAGE}_${DEB_VERSION}_all.deb";
+my $INSTALL_PATH = defined($APT_REPOSITORY_ROOT) ? "$APT_REPOSITORY_ROOT/$INSTALL_DIR" : $INSTALL_DIR;
+
+# environment for child processes
+$ENV{PATH} = "$DEBIAN_COMMAND_PATH:$ENV{PATH}" if defined $DEBIAN_COMMAND_PATH;
+$ENV{PERL5LIB} = $DEBIAN_PERL_LIB if defined $DEBIAN_PERL_LIB;
+
+# make sure Debian commands are available and working
 my @missing_debian_commands;
 push(@missing_debian_commands, 'dpkg-deb') unless system('dpkg-deb --version >/dev/null 2>&1') == 0;
 push(@missing_debian_commands, 'fakeroot') unless system('fakeroot --version >/dev/null 2>&1') == 0;
+push(@missing_debian_commands, 'dpkg-scanpackages') unless system('dpkg-scanpackages --version >/dev/null 2>&1') == 0;
 if (@missing_debian_commands) {
     print 'make-deb: Missing the following Debian ';
     print ((scalar(@missing_debian_commands) > 1) ? 'commands' : 'command');
     print ": " . join(', ', @missing_debian_commands);
-    print "\nPlease ensure that dpkg-deb and fakeroot are in PATH and try again.\n";
+    print "\nPlease configure this script ($0) to find the required Debian tools.\n";
     exit 1;
 }
 
-print "Making a Debian binary package of $DEFS{TARBALL_PATH}...\n";
-print "    Certificates version: $DEFS{OUR_CERTS_MAJOR_VERSION}\n";
-print "    Certificates release: $DEFS{OUR_CERTS_MINOR_VERSION}\n";
-
 # initialize directories
-rmtree($ROOT_DIR); # start fresh
+rmtree($WORKING_DIR_PATH); # start fresh
 mkpath($META_DIR);
 mkpath($GRID_SECURITY_DIR);
+
+
+# ==============================================================================
+# DEB file
+# ==============================================================================
 
 # unpack certificate tarball
 print "    Unpacking certificate tarball...\n";
 chdir($GRID_SECURITY_DIR);
-system("tar xzf $DEFS{TARBALL_PATH}");
+system("tar xzf $TARBALL_PATH");
+
+print "    Assembling the DEB file...\n";
 
 # create a control file
 my $control = <<EOF;
 Package: $DEB_PACKAGE
 Version: $DEB_VERSION
-Section: misc
-Priority: extra
+Priority: $DEB_PRIORITY
+Section: $DEB_SECTION
 Architecture: all
 Maintainer: VDT Team <vdt-support\@opensciencegrid.org>
 Description: CA certificates from the VDT
  Contains CA certificates distributed as a convenience by the VDT.
- They are based on IGTF release $DEFS{IGTF_CERTS_VERSION}.
- The VDT distributes these CA certificates as a matter of convenience;
- we make no assurances that they are good, useful, or right for your site.
+ The VDT makes no assurances that these CA certificates are good,
+ useful, or right for your site.  The distribution is based on IGTF
+ release $IGTF_VERSION.
 EOF
 my $control_fh = new FileHandle("$META_DIR/control", 'w');
 if (not defined $control_fh) {
@@ -117,12 +193,66 @@ if (not defined $copyright_fh) {
 print $copyright_fh $copyright;
 undef $copyright_fh; # automatically closes file
 
-# make the deb file
+# make the DEB file
 chdir($RUN_DIR);
-system("fakeroot dpkg-deb --build $ROOT_DIR_BASENAME $DEB_FILENAME");
+system("fakeroot dpkg-deb --build $WORKING_DIR_BASENAME $DEB_FILENAME");
 
-# clean up
-rmtree($ROOT_DIR);
+# install the DEB file
+mkpath($INSTALL_PATH);
+move($DEB_FILENAME, $INSTALL_PATH);
 
-# install
-move($DEB_FILENAME, $INSTALL_DIR);
+# clean up, part 1
+rmtree($WORKING_DIR_PATH);
+
+# stop now unless using an apt repository
+exit 0 if not defined $APT_REPOSITORY_ROOT;
+
+# ==============================================================================
+# APT repository
+# ==============================================================================
+print "    Setting up the APT repository...\n";
+
+# more setup!
+my $REPOSITORY_DIR_PREFIX = "dists/cacerts/main/binary-";
+my $APT_INDICES_DIR = "$APT_REPOSITORY_ROOT/indices";
+my $APT_OVERRIDE_PATH = "$APT_INDICES_DIR/override.${DEB_DISTRIBUTION}.${DEB_SECTION}";
+
+# create an override file
+mkpath($APT_INDICES_DIR);
+my $override = "$DEB_PACKAGE $DEB_PRIORITY $DEB_SECTION\n";
+my $override_fh = new FileHandle($APT_OVERRIDE_PATH, 'w');
+if (not defined $override_fh) {
+    print "\nERROR: Could not create '$APT_OVERRIDE_PATH': $!\n";
+    exit 1;
+}
+print $override_fh $override;
+undef $override_fh; # automatically closes file
+
+chdir($APT_REPOSITORY_ROOT);
+for my $architecture (qw(i386 amd64)) {
+    print "    Building APT repository indexes for $architecture...\n";
+
+    # path where index files go
+    my $binary_dir = "$APT_REPOSITORY_ROOT/${REPOSITORY_DIR_PREFIX}${architecture}";
+    mkpath($binary_dir);
+
+    # make index files
+    system("dpkg-scanpackages --arch $architecture $INSTALL_DIR $APT_OVERRIDE_PATH | bzip2 -9c > $binary_dir/Packages.bz2");
+
+    # Release file
+    my $release_file = <<EOF;
+Archive: $DEB_DISTRIBUTION
+Component: $DEB_SECTION
+Origin: $APT_ORIGIN
+Label: $APT_LABEL
+Architecture: $architecture
+EOF
+    my $release_path = "$APT_REPOSITORY_ROOT/$REPOSITORY_DIR_PREFIX$architecture/Release";
+    my $release_fh = new FileHandle($release_path, 'w');
+    if (not defined $release_fh) {
+        print "\nERROR: Could not create '$release_path': $!\n";
+        exit 1;
+    }
+    print $release_fh $release_file;
+    undef $release_fh; # automatically closes file
+}
