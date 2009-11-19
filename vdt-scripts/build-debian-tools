@@ -19,6 +19,10 @@ FAKEROOT_SOURCE_DIR=$WORKING_DIR/fakeroot-${FAKEROOT_VERSION}
 
 
 # Setup
+if [ ! -d $WORKING_DIR ]
+then
+    mkdir $WORKING_DIR
+fi
 if [ ! -d $LOG_DIR ]
 then
     mkdir $LOG_DIR
@@ -26,10 +30,6 @@ fi
 if [ ! -d $INSTALL_DIR ]
 then
     mkdir $INSTALL_DIR
-fi
-if [ ! -d $WORKING_DIR ]
-then
-    mkdir $WORKING_DIR
 fi
 cd $WORKING_DIR
 
