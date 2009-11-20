@@ -18,6 +18,27 @@ FAKEROOT_SOURCE_TARBALL=fakeroot_${FAKEROOT_VERSION}.tar.gz
 FAKEROOT_SOURCE_DIR=$WORKING_DIR/fakeroot-${FAKEROOT_VERSION}
 
 
+# Error-handling functions
+handle_download_error()
+{
+    if [ $? -ne 0 ]
+    then
+        echo 'FAILED!'
+        echo 'Check network connections and disk write access and try again.'
+        exit 1
+    fi
+}
+handle_logged_error()
+{
+    if [ $? -ne 0 ]
+    then
+        echo 'FAILED!'
+        echo "Check '$1' for errors."
+        echo 'When errors are fixed, rerun this script.'
+        exit 1
+    fi
+}
+
 # Setup
 if [ ! -d $WORKING_DIR ]
 then
@@ -38,11 +59,13 @@ if [ ! -f $DPKG_SOURCE_TARBALL ]
 then
     echo 'fetching dpkg source'
     curl -sSLO http://ftp.de.debian.org/debian/pool/main/d/dpkg/$DPKG_SOURCE_TARBALL
+    handle_download_error
 fi
 if [ ! -f $FAKEROOT_SOURCE_TARBALL ]
 then
     echo 'fetching fakeroot source'
     curl -sSLO http://ftp.de.debian.org/debian/pool/main/f/fakeroot/$FAKEROOT_SOURCE_TARBALL
+    handle_download_error
 fi
 
 # UNPACK SOURCES
@@ -64,16 +87,19 @@ then
     DPKG_CONFIG_OPTIONS="--prefix=$INSTALL_DIR --without-selinux"
     echo "configuring dpkg with '$DPKG_CONFIG_OPTIONS'"
     ./configure $DPKG_CONFIG_OPTIONS >$LOG_DIR/dpkg-configure.log 2>&1
+    handle_logged_error $LOG_DIR/dpkg-configure.log
 fi
 if [ ! -f src/dpkg ]
 then
     echo 'building dpkg'
     make >$LOG_DIR/dpkg-build.log 2>&1
+    handle_logged_error $LOG_DIR/dpkg-build.log
 fi
 if [ ! -f $INSTALL_DIR/bin/dpkg ]
 then
     echo 'installing dpkg'
     make install >$LOG_DIR/dpkg-install.log 2>&1
+    handle_logged_error $LOG_DIR/dpkg-install.log
 fi
 
 # BUILD FAKEROOT
@@ -83,14 +109,17 @@ then
     FAKEROOT_CONFIG_OPTIONS="--prefix=$INSTALL_DIR"
     echo "configuring fakeroot with '$FAKEROOT_CONFIG_OPTIONS'"
     ./configure $FAKEROOT_CONFIG_OPTIONS >$LOG_DIR/fakeroot-configure.log 2>&1
+    handle_logged_error $LOG_DIR/fakeroot-configure.log
 fi
 if [ ! -f faked ]
 then
     echo 'building fakeroot'
     make >$LOG_DIR/fakeroot-build.log 2>&1
+    handle_logged_error $LOG_DIR/fakeroot-build.log
 fi
 if [ ! -f $INSTALL_DIR/bin/fakeroot ]
 then
     echo 'installing fakeroot'
     make install >$LOG_DIR/fakeroot-install.log 2>&1
+    handle_logged_error $LOG_DIR/fakeroot-install.log
 fi
