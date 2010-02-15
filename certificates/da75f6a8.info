@@ -7,5 +7,5 @@ crl_url = http://ca.garudaindia.in/crl/cacrl.pem
 email = igca@cdacb.ernet.in
 status = accredited:classic
 url = http://ca.garudaindia.in/
-version = 1.32
+version = 1.33
 sha1fp.0 = 11:0B:CF:C7:15:B2:2C:A0:9B:C6:74:48:F1:4F:F8:C8:1D:EC:81:60

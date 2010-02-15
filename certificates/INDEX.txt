@@ -5,9 +5,9 @@ Hash      Source                            More Information                    
 0a2bac92  Brazil - BrGrid                   https://brgridca.ic.uff.br/                         I
 1149214e  Germany - DFN-GridGermany-Root    http://www.pca.dfn.de/                              I
 11b4a5a2  Portugal - LIPCA                  http://ca.lip.pt/                                   I
-12a1d8c2  France - GRID-FR                  http://igc.services.cnrs.fr/GRID-FR/                I
 163af95c  CNRS2                             http://igc.services.cnrs.fr/GRID-FR/                I
 1691b9ba  Turkey - TRGrid                   http://www.grid.org.tr/ca/                          I
+169d7f9c  TERENAeSciencePersonalCA          https://www.terena.org/activities/tcs/              I
 16da7552  The Netherlands - NIKHEF          http://certificate.nikhef.nl/                       I
 1c3f2ca8  USA - DOE Grids                   http://www.doegrids.org/                            I
 1d879c6c  CERN-TCA                          http://www.cern.ch/ca                               I
@@ -24,7 +24,6 @@ Hash      Source                            More Information                    
 2f3fadf6  INFN                              http://security.fi.infn.it/CA/                      I
 304cf809  SWITCHslcs                        http://www.switch.ch/pki/grid                       I
 3232b9bc  MREN - Montenegro                 http://mren-ca.ac.me/                               I
-34a509c3  France - CNRS-Projets             http://igc.services.cnrs.fr/                        I
 367b75c3  UK eScience CA 2007               http://www.grid-support.ac.uk/ca/                   I
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
 3d5be7bc  Slovenia - SiGNET CA              http://signet-ca.ijs.si/                            I
@@ -39,8 +38,10 @@ Hash      Source                            More Information                    
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
 6fee79b0  Israel - IUCC                     http://certificate.iucc.ac.il/                      I
 709bed08  BYGCA                             http://ca.grid.by/                                  I
+712ae4cc  CESNET-CA-3                       ttp://www.cesnet.cz/pki/                            I
 722e5071  Korea - KISTI 2007                http://ca.gridcenter.or.kr/                         I
 742edd45  Latvia - LatGrid                  http://grid.lumii.lv/?lang=en                       I
+75680d2e  AAACertificateServices            https://www.terena.org/activities/tcs/              I
 7721d4d3  PRAGMA-UCSD                       http://goc.pragma-grid.net/ca/                      I
 7b54708e  Morocco: MAGrid CA                http://www.magrid.ma/ca                             I
 7d0d064a  MARGI - Macedonia                 http://www.margi-ca.marnet.net.mk                   I
@@ -53,6 +54,7 @@ Hash      Source                            More Information                    
 9b95bbf2  USA - NCSA MICS                   http://security.ncsa.uiuc.edu/CA/                   I
 9cd75e87  Academia Sinica Grid CA 2007      http://ca.grid.sinica.edu.tw/                       I
 9dd23746  pkIRISGRID                        http://www.irisgrid.es/pki/                         I
+9ec3a561  UTNAAAClient                      https://www.terena.org/activities/tcs/              I 
 9ff26ea4  MD-Grid                           http://ca.grid.md/                                  I
 a02131f7  DFN-SLCS                          http://www.pki.dfn.de/index.php?id=slcs             I
 a317c467  Japan - AIST                      https://www.apgrid.org/CA/AIST/Production/          I
@@ -67,7 +69,6 @@ bffbd7d0  GridCanada                        http://www.gridcanada.ca/ca         
 ce33db76  IRAN-GRID                         http://cagrid.ipm.ac.ir/                            I
 c48c63f3  China - CNIC SDG CA               http://ca.sdg.grid.cn/en/                           I
 cc800af0  Hungary - NIIF                    http://www.ca.niif.hu/                              I
-cf4ba8c8  France - CNRS (EDG Catch-all CA)  http://igc.services.cnrs.fr/                        I
 d0c2a341  Armenia - ArmeSFo                 http://www.escience.am/ca/                          I
 d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid                       I
 d11f973e  CNRS2-Grid-FR                     http://igc.services.cnrs.fr/GRID-FR/                I
@@ -82,10 +83,11 @@ e5cc84c2  US - TACC Root                    http://www.tacc.utexas.edu/CA/      
 e72045ce  SWITCH-QuoVadis-Grid-ICA          http://www.switch.ch/grid/certificates/             I
 e8ac4b61  NCSA GridShib CA                  http://security.ncsa.uiuc.edu/CA/                   I
 e8d818e6  BEGrid2008                        https://gridra.begrid.be/                           I
+edca0fc0  CESNET-CA-Root                    http://www.cesnet.cz/pki/                           I
 f2e89fe3  USA - NCSA SLCS                   http://security.ncsa.uiuc.edu/CA/                   I
 f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/                   I
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.32 http://www.gridpma.org/ 
+I: IGTF 1.33 http://www.gridpma.org/ 
 

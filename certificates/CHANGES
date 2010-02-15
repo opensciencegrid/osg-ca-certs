@@ -1,4 +1,21 @@
 Changes to the VDT certificates package
+===== Version 53 =====
+Released on 15-Feb-2010
+
+Updated to IGTF 1.33:
+  * Added accredited MICS TCS eScience Personal CA (169d7f9c) and
+     hierarchy (75680d2e, 9ec3a561)
+  * Updated AustrianGrid root cert (6e3b436b) with extended life time
+  * Updated PolishGrid CA (8a661490) with new contact and extended root
+    CA life time
+  * Removed expired CNRS-Grid-FR CA (12a1d8c2) (has been superseded by
+    CNRS2-Grid-FR)
+  * Removed obsolete CNRS, CNRS-Projets CA (cf4ba8c8, 34a509c3)
+    (superceded by CNRS2 hierarchy)
+  * Corrected namespaces file for BEGrid2008 (e8d818e6)
+  * Added comment line to REUNA CA (295adc19) signing_policy file
+  * Added new classic CESNET hierarchy "CESNET-CA-Root"(edca0fc0) and
+    "CESNET-CA-3" (712ae4cc)
 
 ===== Version 52 =====
 Released on 26-Oct-2009
