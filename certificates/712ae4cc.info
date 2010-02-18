@@ -10,5 +10,5 @@ policy_url = http://www.cesnet.cz/pki/en/ch-cp-cps.html
 requires = CESNET-CA-Root
 email = ca@cesnet.cz
 status = accredited:classic
-version = 1.33
+version = 1.34
 sha1fp.0 = DD:85:B7:6A:F9:6B:C6:5B:CE:83:43:7D:8C:A6:B0:A3:67:EB:BB:FB

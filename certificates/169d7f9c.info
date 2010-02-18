@@ -10,5 +10,5 @@ policy_url = https://www.terena.org/activities/tcs/repository/
 requires = UTNAAAClient
 email = tcs-pma@terena.org
 status = accredited:mics
-version = 1.33
+version = 1.34
 sha1fp.0 = 7C:F0:F3:2C:72:04:4A:01:7E:7C:87:13:68:94:75:57:92:37:A5:BD

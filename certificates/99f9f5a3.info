@@ -5,5 +5,5 @@ ca_url = http://security.fnal.gov/pki/99f9f5a3.0
 crl_url = http://security.fnal.gov/pki/99f9f5a3.r0
 email = nightwatch@fnal.gov
 status = accredited:slcs
-version = 1.33
+version = 1.34
 sha1fp.0 = 6A:5E:7A:A2:CB:F3:6D:A1:3E:DA:48:63:0B:3E:B8:1D:63:4B:ED:AD

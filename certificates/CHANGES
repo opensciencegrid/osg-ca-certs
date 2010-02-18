@@ -1,4 +1,12 @@
 Changes to the VDT certificates package
+
+===== Version 54 =====
+Released on 18-Feb-2010
+
+Upgraded to IGTF 1.45:
+  * Corrected malformed EACL syntax in signing_policy for
+  CESNET-Root-CA (edca0fc0)
+
 ===== Version 53 =====
 Released on 15-Feb-2010
 

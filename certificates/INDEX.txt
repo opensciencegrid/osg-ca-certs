@@ -89,5 +89,5 @@ f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/   
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.33 http://www.gridpma.org/ 
+I: IGTF 1.34 http://www.gridpma.org/ 
 
