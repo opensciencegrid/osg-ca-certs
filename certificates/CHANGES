@@ -1,5 +1,12 @@
 Changes to the VDT certificates package
 
+===== Version 54-2 =====
+Released on 27-Feb-2010
+
+* Updated the Debian package with a conflicts statement, so this can't
+  be installed at the same time as the OSG Debian package. If you
+  don't use the Debian package, there are no changes in this release.
+
 ===== Version 54 =====
 Released on 18-Feb-2010
 
