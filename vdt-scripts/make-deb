@@ -37,9 +37,11 @@ my $DEB_PACKAGE = 'vdt-ca-certificates';
 
 # Three version numbers: One for the CA certificates themselves, and one for the
 # Debian packaging of them, and one for the IGTF distribution on which the DEB
-# file is based.  In most cases, the Debian revision should be '1'.
-my $CA_CERTIFICATES_VERSION = "$DEFS{OUR_CERTS_MAJOR_VERSION}.$DEFS{OUR_CERTS_MINOR_VERSION}";
-my $DEBIAN_REVISION = '1';
+# file is based.  In most cases, the Debian revision should be '1', but we match 
+# what we get from the CA Certificates minor version, because it has the same meaning:
+# it's only incremented when the packaging is messed with. 
+my $CA_CERTIFICATES_VERSION = $DEFS{OUR_CERTS_MAJOR_VERSION};
+my $DEBIAN_REVISION = $DEFS{OUR_CERTS_MINOR_VERSION};
 my $IGTF_VERSION = $DEFS{IGTF_CERTS_VERSION};
 
 # The root of the APT repository.  Comment out if not using an APT repository.
