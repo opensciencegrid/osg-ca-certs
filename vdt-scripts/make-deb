@@ -130,6 +130,7 @@ Version: $DEB_VERSION
 Priority: $DEB_PRIORITY
 Section: $DEB_SECTION
 Architecture: all
+Conflicts: osg-ca-certs
 Maintainer: VDT Team <vdt-support\@opensciencegrid.org>
 Description: CA certificates from the VDT
  Contains CA certificates distributed as a convenience by the VDT.
