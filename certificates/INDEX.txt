@@ -49,7 +49,7 @@ Hash      Source                            More Information                    
 8a047de1  NECTEC GOC                        http://gridca.hpcc.nectec.or.th/                    I
 8a661490  Poland - PolishGrid               http://www.man.poznan.pl/plgrid-ca/                 I
 98ef0ee5  UK eScience Root CA 2007          http://www.grid-support.ac.uk/ca/                   I
-99f9f5a3  FNAL SLCS                         ttp://security.fnal.gov/cookbook/TrustingCertificates.html I
+99f9f5a3  FNAL SLCS                         http://security.fnal.gov/cookbook/TrustingCertificates.html I
 9b59ecad  Czech Republic - CESNET           http://www.cesnet.cz/pki/                           I
 9b95bbf2  USA - NCSA MICS                   http://security.ncsa.uiuc.edu/CA/                   I
 9cd75e87  Academia Sinica Grid CA 2007      http://ca.grid.sinica.edu.tw/                       I
@@ -78,7 +78,6 @@ d254cc30  CERN-ROOT                         http://www.cern.ch/ca               
 da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I
 dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                                 I
 e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/                             I
-e1fce4e9  Fermilab KCA CA                   https://computing.fnal.gov/security/pki/            I
 e5cc84c2  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 e72045ce  SWITCH-QuoVadis-Grid-ICA          http://www.switch.ch/grid/certificates/             I
 e8ac4b61  NCSA GridShib CA                  http://security.ncsa.uiuc.edu/CA/                   I
@@ -89,5 +88,5 @@ f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/   
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.34 http://www.gridpma.org/ 
+I: IGTF 1.35 http://www.gridpma.org/ 
 
