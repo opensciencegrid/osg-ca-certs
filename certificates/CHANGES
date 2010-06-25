@@ -1,5 +1,12 @@
 Changes to the VDT certificates package
 
+===== Version 56 =====
+Released on 25-Jun-2010
+
+Updated to IGTF 1.36:
+  * Updated root certificate for PLGrid with corrected SAN extension
+    (8a661490). 
+
 ===== Version 55 =====
 Released on 21-Jun-2010
 
