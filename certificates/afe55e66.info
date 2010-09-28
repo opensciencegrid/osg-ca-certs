@@ -8,5 +8,5 @@ crl_url = http://cygrid.org.cy/CyGridCA/afe55e66.r0
 email = cygrid-ca@ucy.ac.cy
 url = http://cygrid.org.cy/CyGridCA/
 status = accredited:classic
-version = 1.36
+version = 1.37
 sha1fp.0 = 31:75:10:A5:62:1D:14:F0:A9:EC:68:14:F0:33:7E:49:FD:E4:37:95

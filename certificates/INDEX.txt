@@ -15,6 +15,7 @@ Hash      Source                            More Information                    
 1e43b9cc  Ireland - Grid-Ireland            http://www.cs.tcd.ie/grid-ireland/gi-ca/            I
 1f0e8352  Nordic countries - NorduGrid      http://hep.nbi.dk/CA/                               I
 1f3834d0  RomanianGRID - Romania            http://www.romaniangrid.ro                          I
+20ce830e  TERENA-eScience-SSL-CA            https://www.terena.org/activities/tcs/repository/   I
 2418a3f3  BG-ACAD (Bulgarian Academic CA)   http://www.ca.acad.bg/                              I
 24c3ccde  UNAM Grid - Mexico                http://ca.unamgrid.unam.mx/                         I
 28a58577  Greece - HellasGrid (Root 2006)   http://www.grid.auth.gr/pki/hellasgrid-root-ca-2006/ I
@@ -26,6 +27,7 @@ Hash      Source                            More Information                    
 3232b9bc  MREN - Montenegro                 http://mren-ca.ac.me/                               I
 367b75c3  UK eScience CA 2007               http://www.grid-support.ac.uk/ca/                   I
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
+3c58f906  AddTrust-External-CA-Root         http://www.comodo.com/                              I
 3d5be7bc  Slovenia - SiGNET CA              http://signet-ca.ijs.si/                            I
 3f0f4285  Venezuela - ULAGrid CA            http://ra.cecalc.ula.ve                             I
 71a89a47  NCHC                              http://ca.goc.nchc.org.tw/                          I
@@ -41,7 +43,7 @@ Hash      Source                            More Information                    
 712ae4cc  CESNET-CA-3                       ttp://www.cesnet.cz/pki/                            I
 722e5071  Korea - KISTI 2007                http://ca.gridcenter.or.kr/                         I
 742edd45  Latvia - LatGrid                  http://grid.lumii.lv/?lang=en                       I
-75680d2e  AAACertificateServices            https://www.terena.org/activities/tcs/              I
+75680d2e  AAACertificateServices            https://www.terena.org/activities/tcs/repository/   I
 7721d4d3  PRAGMA-UCSD                       http://goc.pragma-grid.net/ca/                      I
 7b54708e  Morocco: MAGrid CA                http://www.magrid.ma/ca                             I
 7d0d064a  MARGI - Macedonia                 http://www.margi-ca.marnet.net.mk                   I
@@ -72,7 +74,6 @@ cc800af0  Hungary - NIIF                    http://www.ca.niif.hu/              
 d0c2a341  Armenia - ArmeSFo                 http://www.escience.am/ca/                          I
 d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid                       I
 d11f973e  CNRS2-Grid-FR                     http://igc.services.cnrs.fr/GRID-FR/                I
-d1737728  NGO-Netrust                       http://netrustconnector.netrust.net/                I
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            I
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
 da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I
@@ -85,8 +86,9 @@ e8d818e6  BEGrid2008                        https://gridra.begrid.be/           
 edca0fc0  CESNET-CA-Root                    http://www.cesnet.cz/pki/                           I
 f2e89fe3  USA - NCSA SLCS                   http://security.ncsa.uiuc.edu/CA/                   I
 f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/                   I
+ff783690  AddTrust-External-CA-Root         http://www.comodo.com/                              I
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.36 http://www.gridpma.org/ 
+I: IGTF 1.37 http://www.gridpma.org/ 
 

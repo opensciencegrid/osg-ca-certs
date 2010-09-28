@@ -1,5 +1,16 @@
 Changes to the VDT certificates package
 
+===== Version 57 =====
+Released on 28-Sep-2010
+
+Updated to IGTF 1.37:
+  * Added accredited classic TERENA eScience SSL CA and hierarchy
+    (20ce830e, ff783690, 3c58f906)
+  * Discontinued NGO-Netrust CA (d1737728)
+  * Corrected typo errors in namespaces file for AAACertificateServices
+    (75680d2e)
+  * Added CILogon CAs in experimental area (US)
+
 ===== Version 56 =====
 Released on 25-Jun-2010
 
