@@ -142,7 +142,7 @@ foreach my $hash (sort(keys(%certificate_hash)))
             {
                 $differences++;
                 print DIFFS "\n##### Comparing different versions of $igtf_basename\n";
-                print DIFFS `diff -u $igtf_path $vdt_cert_path`;
+                print DIFFS `diff -u $vdt_cert_path $igtf_path`;
                 print SCRIPT "cp \$IGTF/$igtf_basename \$VDT_CERTS/$igtf_basename\n";
             }
         }
