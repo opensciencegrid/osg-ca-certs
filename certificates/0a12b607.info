@@ -8,5 +8,5 @@ crl_url = http://ca.ugrid.org/cacrl.der
 email = ca@ugrid.org
 status = accredited:classic
 url = https://ca.ugrid.org/
-version = 1.37
+version = 1.38
 sha1fp.0 = 1C:FD:9C:16:99:60:1F:34:25:5C:68:39:7D:A4:40:3C:A8:DC:AE:5F

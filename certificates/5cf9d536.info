@@ -7,5 +7,5 @@ ca_url = http://trust.quovadisglobal.com/pem/qvrca.crt
 crl_url = http://crl.quovadisglobal.com/qvrca.crl
 email = pki@switch.ch
 status = accredited:classic
-version = 1.37
+version = 1.38
 sha1fp.0 = DE:3F:40:BD:50:93:D3:9B:6C:60:F6:DA:BC:07:62:01:00:89:76:C9

@@ -3,6 +3,7 @@ Hash      Source                            More Information                    
 09ff08b7  CNRS-Projets                      http://igc.services.cnrs.fr/GRID-FR/                I
 0a12b607  UGrid - Ukraine                   https://ca.ugrid.org/                               I
 0a2bac92  Brazil - BrGrid                   https://brgridca.ic.uff.br/                         I
+10718cba  CILogon                           http://ca.cilogon.org/                              I
 1149214e  Germany - DFN-GridGermany-Root    http://www.pca.dfn.de/                              I
 11b4a5a2  Portugal - LIPCA                  http://ca.lip.pt/                                   I
 163af95c  CNRS2                             http://igc.services.cnrs.fr/GRID-FR/                I
@@ -90,5 +91,4 @@ ff783690  AddTrust-External-CA-Root         http://www.comodo.com/              
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
 
 Sources
-I: IGTF 1.37 http://www.gridpma.org/ 
-
+I: IGTF 1.38 http://www.gridpma.org/ 

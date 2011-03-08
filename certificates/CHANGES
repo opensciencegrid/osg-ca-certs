@@ -1,5 +1,21 @@
 Changes to the VDT certificates package
 
+===== Version 58 =====
+Released on 7-Mar-2011
+
+Updated to IGTF 1.38:
+   * Updated meta-data info file for SRCE (ff94d436)
+   * Updated KEK CA root (617ff41b) with extended life time
+   * Updated contact email address for ArmeSFo (d0c2a341)
+   * Extended allowed namespace and new URL for SEE-GRID CA as EGI
+     catch-all (468d15b3)
+   * Extended allowed namespace for NAREGI CA (a87d9192)
+   * Added accredited CILogin MICS CA (10718cba)
+   * Extended life time for NCSA CACL (MICS) CA (9b95bbf2)
+   * Extended life time for NCSA MyProxy (SLCS) CA (f2e89fe3)
+   * Extended life time for NorduGrid CA (1f0e8352)
+   * Corrected namespaces file for TCS eScience Personal (75680d2e)
+
 ===== Version 57 =====
 Released on 28-Sep-2010
 
