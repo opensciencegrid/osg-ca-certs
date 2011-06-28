@@ -1,5 +1,19 @@
 Changes to the VDT certificates package
 
+===== Version 59 =====
+Released on 28-Jun-2011
+
+Updated to IGTF 1.39:
+   * Change of contact address for NAREGI CA (a87d9192)
+   * Change of contact address for GermanGrid CA (dd4b34ea)
+   * Added accredited classic HIAST CA (74c6eaeb)
+   * Added accredited classic Uni Andes CA (fc1898ec)
+   * Extended life time of root certificate for SiGNET-CA (3d5be7bc)
+   * Extended life time of root certificate for Grid-Ireland (1e43b9cc)
+   * New issuing certificates (2A, 2B) for UKeScience (1b6f5ede, ffc3d59b)
+   * Updated extensions for DOEGrids-CA-1 issuing CA (1c3f2ca8)
+
+
 ===== Version 58 =====
 Released on 7-Mar-2011
 

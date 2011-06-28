@@ -9,5 +9,5 @@ email = ca@tacc.utexas.edu
 status = accredited:classic
 url = http://www.tacc.utexas.edu/CA/
 requires = TACC-Root
-version = 1.38
+version = 1.39
 sha1fp.0 = 5B:AE:F7:20:B1:3A:91:4F:1C:FE:8F:AF:5E:ED:48:DB:62:0E:47:65

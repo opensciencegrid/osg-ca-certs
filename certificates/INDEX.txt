@@ -10,6 +10,7 @@ Hash      Source                            More Information                    
 1691b9ba  Turkey - TRGrid                   http://www.grid.org.tr/ca/                          I
 169d7f9c  TERENAeSciencePersonalCA          https://www.terena.org/activities/tcs/              I
 16da7552  The Netherlands - NIKHEF          http://certificate.nikhef.nl/                       I
+1b6f5ede  UKeScienceCA-2A                   http://www.grid-support.ac.uk/ca/                   I
 1c3f2ca8  USA - DOE Grids                   http://www.doegrids.org/                            I
 1d879c6c  CERN-TCA                          http://www.cern.ch/ca                               I
 1e12d831  APAC                              http://www.vpac.org/twiki/bin/view/APACgrid/CaInterface I
@@ -44,6 +45,7 @@ Hash      Source                            More Information                    
 712ae4cc  CESNET-CA-3                       ttp://www.cesnet.cz/pki/                            I
 722e5071  Korea - KISTI 2007                http://ca.gridcenter.or.kr/                         I
 742edd45  Latvia - LatGrid                  http://grid.lumii.lv/?lang=en                       I
+74c6eaeb  HIAST                             http://ca.grid.hiast.edu.sy/                        I
 75680d2e  AAACertificateServices            https://www.terena.org/activities/tcs/repository/   I
 7721d4d3  PRAGMA-UCSD                       http://goc.pragma-grid.net/ca/                      I
 7b54708e  Morocco: MAGrid CA                http://www.magrid.ma/ca                             I
@@ -86,9 +88,11 @@ e8ac4b61  NCSA GridShib CA                  http://security.ncsa.uiuc.edu/CA/   
 e8d818e6  BEGrid2008                        https://gridra.begrid.be/                           I
 edca0fc0  CESNET-CA-Root                    http://www.cesnet.cz/pki/                           I
 f2e89fe3  USA - NCSA SLCS                   http://security.ncsa.uiuc.edu/CA/                   I
+fc1898ec  UniandesCA                        https://ra.uniandes.edu.co                          I
 f5ead794  PK-Grid-2007                      http://www.ncp.edu.pk/pk-grid-ca/                   I
 ff783690  AddTrust-External-CA-Root         http://www.comodo.com/                              I
 ff94d436  Croatia - SRCE                    http://ra.srce.hr/                                  I
+ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.38 http://www.gridpma.org/ 
+I: IGTF 1.39 http://www.gridpma.org/ 

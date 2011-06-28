@@ -8,5 +8,5 @@ policy_url = http://cagrid.ipm.ac.ir/policy.htm
 email = ca-manager@ipm.ir
 status = accredited:classic
 url = http://cagrid.ipm.ac.ir/
-version = 1.38
+version = 1.39
 sha1fp.0 = 74:FC:08:CD:04:D0:2F:5D:62:70:DD:70:A1:8E:79:F7:45:01:D1:7B
