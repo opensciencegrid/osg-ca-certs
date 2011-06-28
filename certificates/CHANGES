@@ -1,5 +1,11 @@
 Changes to the VDT certificates package
 
+===== Version 60 =====
+Released on 28-Jun-2011
+
+Updated to IGTF 1.40:
+   * Corrected fingerprint meta-data for UniAndes CA (fc1898ec)
+
 ===== Version 59 =====
 Released on 28-Jun-2011
 

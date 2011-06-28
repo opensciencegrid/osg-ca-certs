@@ -95,4 +95,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.39 http://www.gridpma.org/ 
+I: IGTF 1.40 http://www.gridpma.org/ 
