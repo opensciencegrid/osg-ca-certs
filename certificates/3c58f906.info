@@ -16,5 +16,5 @@ url = http://www.comodo.com/
 policy_url = http://www.comodo.com/repository
 email = tcs-pma@terena.org
 status = accredited:classic
-version = 1.40
+version = 1.41
 sha1fp.0 = 02:FA:F3:E2:91:43:54:68:60:78:57:69:4D:F5:E4:5B:68:85:18:68

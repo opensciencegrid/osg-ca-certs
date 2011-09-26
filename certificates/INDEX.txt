@@ -3,6 +3,7 @@ Hash      Source                            More Information                    
 09ff08b7  CNRS-Projets                      http://igc.services.cnrs.fr/GRID-FR/                I
 0a12b607  UGrid - Ukraine                   https://ca.ugrid.org/                               I
 0a2bac92  Brazil - BrGrid                   https://brgridca.ic.uff.br/                         I
+0a49430a  DZeScience                        https://ca.grid.arn.dz                              I
 10718cba  CILogon                           http://ca.cilogon.org/                              I
 1149214e  Germany - DFN-GridGermany-Root    http://www.pca.dfn.de/                              I
 11b4a5a2  Portugal - LIPCA                  http://ca.lip.pt/                                   I
@@ -35,6 +36,7 @@ Hash      Source                            More Information                    
 71a89a47  NCHC                              http://ca.goc.nchc.org.tw/                          I
 468d15b3  Balkans - SeeGrid                 http://www.grid.auth.gr/pki/seegrid-ca/             I
 4798da47  HKU                               http://ca.grid.hku.hk/                              I
+4b2783ac  PSC-Myproxy-CA                    http://www.psc.edu/ca/                              I
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
 5cf9d536  QuoVadis-Root-CA1                 http://www.switch.ch/pki/                           I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
@@ -80,6 +82,7 @@ d11f973e  CNRS2-Grid-FR                     http://igc.services.cnrs.fr/GRID-FR/
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            I
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
 da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I
+dc75341f  NICS-MyProxy                      http://www.nics.tennessee.edu/ca                    I
 dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                                 I
 e13e0fcf  Slovakia - SlovakGrid             http://ups.savba.sk/ca/                             I
 e5cc84c2  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
@@ -95,4 +98,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.40 http://www.gridpma.org/ 
+I: IGTF 1.41 http://www.gridpma.org/ 

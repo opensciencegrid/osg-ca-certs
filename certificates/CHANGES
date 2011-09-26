@@ -1,5 +1,22 @@
 Changes to the VDT certificates package
 
+===== Version 61 =====
+Released on 26-Sep-2011
+
+Updated to IGTF 1.41:
+   * Added accredited PSC MyProxy SLCS CA (4b2783ac)
+   * Updated CRL URL for LIPCA (11b4a5a2)
+   * Extended life time of SlovakGrid CA root (e13e0fcf)
+   * Added accredited DZ-eScience CA (0a49430a)
+   * Added accredited NICS SLCS MyProxy CA (dc75341f)
+   * Added new UK eScience issuing CAs 2A and 2B to allowed namespaces
+     and removed superfluous signing policy entries (UK)
+   * Normalised the certificate files (.0) for selected CAs in the 'old'
+     format distribution. Affected CAs are CESNET (9b59ecad), NIKHEF (16da7552), 
+     NIIF (cc800af0), DFN-GridGermany-Root (1149214e), PSC-Myproxy-CA
+     (4b2783ac), and NERSC-SLCS (b93d6240). Old and new format files are now identical. 
+
+
 ===== Version 60 =====
 Released on 28-Jun-2011
 

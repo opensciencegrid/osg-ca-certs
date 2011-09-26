@@ -7,4 +7,4 @@ crl_url = http://ca.ncsa.uiuc.edu/9b95bbf2.r0
 email = security@ncsa.uiuc.edu
 status =  accredited:mics
 sha1fp.0 = CA:94:22:C3:C8:F2:33:67:02:44:98:0A:FE:6C:38:04:33:E2:CC:C4
-version = 1.40
+version = 1.41
