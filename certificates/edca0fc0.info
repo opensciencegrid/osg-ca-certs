@@ -9,5 +9,5 @@ crl_url = http://crl.cesnet-ca.cz/CESNET_CA_Root.crl
 policy_url = http://www.cesnet.cz/pki/en/ch-cp-cps.html
 email = ca@cesnet.cz
 status = accredited:classic
-version = 1.41
+version = 1.42
 sha1fp.0 = E7:84:74:90:F7:11:43:FC:CE:F6:F6:5A:30:DA:1F:23:9E:0F:D7:BA

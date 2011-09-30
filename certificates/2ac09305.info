@@ -9,5 +9,5 @@ email = ca@tacc.utexas.edu
 status = accredited:mics
 url = http://www.tacc.utexas.edu/CA/
 requires = TACC-Root
-version = 1.41
+version = 1.42
 sha1fp.0 = E0:45:7E:E9:FD:E5:08:D9:CA:E0:E6:06:42:97:A0:25:0C:E9:B0:A1

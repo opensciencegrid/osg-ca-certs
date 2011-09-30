@@ -1,5 +1,11 @@
 Changes to the VDT certificates package
 
+===== Version 62 =====
+Released on 30-Sep-2011
+
+Updated to IGTF 1.42:
+    * Corrected signing_policy file for UKeScience CA 2B (ffc3d59b)
+
 ===== Version 61 =====
 Released on 26-Sep-2011
 

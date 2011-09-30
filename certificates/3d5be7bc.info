@@ -9,5 +9,5 @@ crl_url = http://signet-ca.ijs.si/pub/crl/signet02cacrl.crl
 email = signet-ca@ijs.si
 status = accredited:classic
 url = http://signet-ca.ijs.si/
-version = 1.41
+version = 1.42
 sha1fp.0 = 15:01:9E:62:9D:F2:5C:C6:5F:A7:13:7E:E3:85:3A:DD:20:BC:54:44
