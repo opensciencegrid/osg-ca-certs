@@ -26,7 +26,6 @@ Hash      Source                            More Information                    
 2a237f16  Baltic States - Baltic Grid CA    http://ca.balticgrid.org/                           I
 2ac09305  TACC MICS                         http://www.tacc.utexas.edu/CA/                      I
 2f3fadf6  INFN                              http://security.fi.infn.it/CA/                      I
-304cf809  SWITCHslcs                        http://www.switch.ch/pki/grid                       I
 3232b9bc  MREN - Montenegro                 http://mren-ca.ac.me/                               I
 367b75c3  UK eScience CA 2007               http://www.grid-support.ac.uk/ca/                   I
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
@@ -39,6 +38,7 @@ Hash      Source                            More Information                    
 4b2783ac  PSC-Myproxy-CA                    http://www.psc.edu/ca/                              I
 55994d72  Russia - RDIG                     http://ca.grid.kiae.ru/RDIG/                        I
 5cf9d536  QuoVadis-Root-CA1                 http://www.switch.ch/pki/                           I
+5e15f3bd  SWITCHslcs2011                    http://www.switch.ch/pki/grid                       I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
 684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
@@ -69,6 +69,7 @@ a87d9192  Japan - NAREGI                    https://www.naregi.org/ca/          
 a9082267  Latin American and Caribbean Catch-all Grid CA http://lacgridca.ic.uff.br/            I
 afe55e66  Cyprus - CyGrid                   http://grid.ucy.ac.cy/CyGridCA/                     I
 b2771d44  China - CNIC Grid CA              http://ca.grid.cn/en/                               I
+b3222f9e  JUnet - Jordan                    http://www.junet.edu.jo/ca                          I
 b7bcb7b2  Argentina - UNPL Grid CA          https://www.pkigrid.unlp.edu.ar/                    I
 ba2f39ca  China - IHEP                      https://gridca.ihep.ac.cn/                          I
 b93d6240  NERSC SLCS CA                     http://certs.nersc.gov/                             I
@@ -98,4 +99,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.42 http://www.gridpma.org/ 
+I: IGTF 1.43 http://www.gridpma.org/ 

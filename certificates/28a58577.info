@@ -9,5 +9,5 @@ crl_url = http://crl.grid.auth.gr/hellasgrid-root-ca-2006/28a58577.pem
 policy_url = https://www.grid.auth.gr/pki/hellasgrid-ca/documents/cps/HellasGrid-CA-CP-CPS.pdf
 email = contact@grid.auth.gr
 status = accredited:classic
-version = 1.42
+version = 1.43
 sha1fp.0 = 9F:35:7D:30:A0:9A:C1:8F:84:22:A4:C9:26:F5:B2:B9:E1:0F:2D:DE

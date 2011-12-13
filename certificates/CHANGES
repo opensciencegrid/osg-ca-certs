@@ -1,5 +1,18 @@
 Changes to the VDT certificates package
 
+===== Version 63 =====
+Released on 
+
+Updated to IGTF 1.43:
+   * Added new SWITCHslcs 2011 CA, replacing SWITCHslcs 2009 (CH)
+   * Updated contact information for SWITCH CAs (CH)
+   * Added new accredited classic JUnet CA (JO)
+   * Added additional CRL URL for DOEGrids CA in certificate and meta
+     data (US)
+   * Added additional CRL URL for ESnet Root CA in meta data (US)
+   * Updated institute information for KIT in signing_policy file (DE)
+   * Updated enrollment URLs for Grid-FR CA (FR)
+
 ===== Version 62 =====
 Released on 30-Sep-2011
 
