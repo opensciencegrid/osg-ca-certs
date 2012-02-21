@@ -1,5 +1,12 @@
 Changes to the VDT certificates package
 
+===== Version 64 =====
+Released on 21-Feb-2012
+
+Updated to IGTF 1.44:
+   * Added accredited classic DigiCert CA chains (US)
+   * Extended life time of UGRID root cert (UA)
+
 ===== Version 63 =====
 Released on 
 

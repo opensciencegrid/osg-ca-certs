@@ -7,5 +7,5 @@ url = http://grid.fzk.de/cgi-bin/welcome_ca.pl
 crl_url = http://grid.fzk.de/ca/gridka-crl.pem
 email = GridKa-CA@kit.edu
 status = accredited:classic
-version = 1.43
+version = 1.44
 sha1fp.0 = AF:A0:D1:16:FB:E6:E9:44:9B:22:01:8A:6E:0D:AC:23:A7:DC:CD:A7

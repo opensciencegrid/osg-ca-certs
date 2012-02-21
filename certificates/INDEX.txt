@@ -21,6 +21,7 @@ Hash      Source                            More Information                    
 20ce830e  TERENA-eScience-SSL-CA            https://www.terena.org/activities/tcs/repository/   I
 2418a3f3  BG-ACAD (Bulgarian Academic CA)   http://www.ca.acad.bg/                              I
 24c3ccde  UNAM Grid - Mexico                http://ca.unamgrid.unam.mx/                         I
+2694e4f2  DigiCertGridRootCA-Root           http://www.digicert-grid.com/                       I
 28a58577  Greece - HellasGrid (Root 2006)   http://www.grid.auth.gr/pki/hellasgrid-root-ca-2006/ I
 295adc19  Chile - REUNA CA                  http://reuna-ca.reuna.cl/                           I
 2a237f16  Baltic States - Baltic Grid CA    http://ca.balticgrid.org/                           I
@@ -28,6 +29,7 @@ Hash      Source                            More Information                    
 2f3fadf6  INFN                              http://security.fi.infn.it/CA/                      I
 3232b9bc  MREN - Montenegro                 http://mren-ca.ac.me/                               I
 367b75c3  UK eScience CA 2007               http://www.grid-support.ac.uk/ca/                   I
+38f7145f  DigiCertGridTrustCA-Classic       http://www.digicert-grid.com/                       I
 393f7863  Serbia - AEGIS                    http://aegis-ca.rcub.bg.ac.yu/                      I
 3c58f906  AddTrust-External-CA-Root         http://www.comodo.com/                              I
 3d5be7bc  Slovenia - SiGNET CA              http://signet-ca.ijs.si/                            I
@@ -41,6 +43,7 @@ Hash      Source                            More Information                    
 5e15f3bd  SWITCHslcs2011                    http://www.switch.ch/pki/grid                       I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
 684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
+69105f4f  DigiCertAssuredIDRootCA-Root      http://www.digicert-grid.com/                       I
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
 6fee79b0  Israel - IUCC                     http://certificate.iucc.ac.il/                      I
 709bed08  BYGCA                             http://ca.grid.by/                                  I
@@ -76,6 +79,7 @@ b93d6240  NERSC SLCS CA                     http://certs.nersc.gov/             
 bffbd7d0  GridCanada                        http://www.gridcanada.ca/ca                         I
 ce33db76  IRAN-GRID                         http://cagrid.ipm.ac.ir/                            I
 c48c63f3  China - CNIC SDG CA               http://ca.sdg.grid.cn/en/                           I
+c7a717ce  DigiCertGridCA-1-Classic          http://www.digicert-grid.com/                       I
 cc800af0  Hungary - NIIF                    http://www.ca.niif.hu/                              I
 d0c2a341  Armenia - ArmeSFo                 http://www.escience.am/ca/                          I
 d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid                       I
@@ -99,4 +103,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.43 http://www.gridpma.org/ 
+I: IGTF 1.44 http://www.gridpma.org/ 

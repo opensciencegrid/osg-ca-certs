@@ -8,5 +8,5 @@ url = http://www.grid-support.ac.uk/ca/
 crl_url = http://crl.ca.ngs.ac.uk/crl/escience2a.crl
 email = support@grid-support.ac.uk
 status = accredited:classic
-version = 1.43
+version = 1.44
 sha1fp.0 = 41:C7:C4:A0:31:F7:07:02:81:C7:61:D5:7E:92:48:01:DF:87:C9:06
