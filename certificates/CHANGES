@@ -1,5 +1,12 @@
 Changes to the VDT certificates package
 
+===== Version 65 =====
+Release on 9-Apr-2012
+
+Updated to IGTF 1.46:
+  * Added accredited NCSA 2-factor SLCS CA (US)
+  * Removed discontinued CESNET (9b59ecad) CA (CZ)
+
 ===== Version 64 =====
 Released on 21-Feb-2012
 

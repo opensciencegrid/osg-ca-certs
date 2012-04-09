@@ -42,6 +42,7 @@ Hash      Source                            More Information                    
 5cf9d536  QuoVadis-Root-CA1                 http://www.switch.ch/pki/                           I
 5e15f3bd  SWITCHslcs2011                    http://www.switch.ch/pki/grid                       I
 617ff41b  Japan - KEK                       https://gridca.kek.jp/                              I
+679cff61  NCSA-tfca                         https://security.ncsa.illinois.edu/CA/              I
 684261aa  US - TACC Root                    http://www.tacc.utexas.edu/CA/                      I
 69105f4f  DigiCertAssuredIDRootCA-Root      http://www.digicert-grid.com/                       I
 6e3b436b  Austria - AustrianGrid            https://ca.austriangridca.at/                       I
@@ -60,7 +61,6 @@ Hash      Source                            More Information                    
 8a661490  Poland - PolishGrid               http://www.man.poznan.pl/plgrid-ca/                 I
 98ef0ee5  UK eScience Root CA 2007          http://www.grid-support.ac.uk/ca/                   I
 99f9f5a3  FNAL SLCS                         http://security.fnal.gov/cookbook/TrustingCertificates.html I
-9b59ecad  Czech Republic - CESNET           http://www.cesnet.cz/pki/                           I
 9b95bbf2  USA - NCSA MICS                   http://security.ncsa.uiuc.edu/CA/                   I
 9cd75e87  Academia Sinica Grid CA 2007      http://ca.grid.sinica.edu.tw/                       I
 9dd23746  pkIRISGRID                        http://www.irisgrid.es/pki/                         I
@@ -103,4 +103,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.44 http://www.gridpma.org/ 
+I: IGTF 1.46 http://www.gridpma.org/ 

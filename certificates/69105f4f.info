@@ -7,5 +7,5 @@ crl_url = http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl;http://crl4.digic
 email = support@DigiCert.com
 status = accredited:classic
 url = http://www.digicert-grid.com/
-version = 1.44
+version = 1.46
 sha1fp.0 = 05:63:B8:63:0D:62:D7:5A:BB:C8:AB:1E:4B:DF:B5:A8:99:B2:4D:43

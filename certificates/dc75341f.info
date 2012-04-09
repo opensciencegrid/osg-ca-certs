@@ -7,5 +7,5 @@ ca_url = http://www.nics.tennessee.edu/sites/www.nics.tennessee.edu/files/ca/dc7
 crl_url = http://www.nics.tennessee.edu/sites/www.nics.tennessee.edu/files/ca/dc75341f.crl
 email = security@nics.tennessee.edu
 status = accredited:slcs
-version = 1.44
+version = 1.46
 sha1fp.0 = 86:60:78:60:20:7A:EF:B7:A1:21:9C:91:B2:75:26:32:8B:05:70:4D
