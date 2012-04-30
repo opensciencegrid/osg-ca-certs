@@ -1,5 +1,12 @@
 Changes to the VDT certificates package
 
+===== Version 66 =====
+Release on TBD
+
+Updated to IGTF 1.47:
+  * Updates CA URL metadata and CRL for pkIRISGrid CA (ES)
+  * Added accredited classic MYIFAM CA (MY)
+
 ===== Version 65 =====
 Release on 9-Apr-2012
 

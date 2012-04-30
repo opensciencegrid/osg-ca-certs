@@ -7,5 +7,5 @@ crl_url = http://ca.goc.nchc.org.tw/nchcca/CRL/NCHCCRL.der
 email = nchcca@nchc.org.tw
 status = accredited:classic
 url = http://ca.goc.nchc.org.tw/
-version = 1.46
+version = 1.47
 sha1fp.0 = 27:BF:3B:DB:1F:A8:29:4E:D9:F2:63:A3:5E:1F:62:7D:7B:6E:7F:37

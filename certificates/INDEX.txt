@@ -86,6 +86,7 @@ d0b701c0  SWITCHGrid Root                   http://www.switch.ch/pki/grid       
 d11f973e  CNRS2-Grid-FR                     http://igc.services.cnrs.fr/GRID-FR/                I
 d1b603c3  US - ESnet Root                   http://www.doegrids.org/                            I
 d254cc30  CERN-ROOT                         http://www.cern.ch/ca                               I
+d33760ec  MYIFAM                            http://myifam.upm.my                                I
 da75f6a8  Indian Grid CA                    http://ca.garudaindia.in/                           I
 dc75341f  NICS-MyProxy                      http://www.nics.tennessee.edu/ca                    I
 dd4b34ea  Germany - GermanGrid              http://grid.fzk.de/                                 I
@@ -103,4 +104,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.46 http://www.gridpma.org/ 
+I: IGTF 1.47 http://www.gridpma.org/ 
