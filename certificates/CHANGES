@@ -1,7 +1,7 @@
 Changes to the VDT certificates package
 
 ===== Version 66 =====
-Release on TBD
+Release on 22-May-2012
 
 Updated to IGTF 1.47:
   * Updates CA URL metadata and CRL for pkIRISGrid CA (ES)
