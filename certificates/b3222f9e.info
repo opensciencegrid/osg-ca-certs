@@ -9,5 +9,5 @@ policy_url = https://ra.junet.edu.jo/pki/pub/cacert/CP_CPS_9-29-2011.pdf
 email = cagrid@junet.edu.jo
 status = accredited:classic
 url = http://www.junet.edu.jo/ca
-version = 1.47
+version = 1.48
 sha1fp.0 = DA:BB:DF:B0:61:3D:21:04:7B:19:24:4D:B2:E7:BF:E6:B5:3A:03:15

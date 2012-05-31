@@ -1,5 +1,11 @@
 Changes to the VDT certificates package
 
+===== Version 67 =====
+Release on XXX
+
+Updated to IGTF 1.48:
+  * Extended life time of DFN GridGermany Root (1149214e) and CDPs  (DE)
+
 ===== Version 66 =====
 Release on 22-May-2012
 
