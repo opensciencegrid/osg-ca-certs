@@ -7,5 +7,5 @@ ca_url = http://myifam.upm.my/pub/MYIFAM.pem
 email = myifam@biruni.upm.my
 status = accredited:classic
 url = http://myifam.upm.my
-version = 1.48
+version = 1.49
 sha1fp.0 = DC:E1:EF:BF:F4:11:E8:93:66:61:F3:1F:47:3A:5D:0A:18:EB:DD:2C

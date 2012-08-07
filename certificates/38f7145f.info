@@ -8,6 +8,6 @@ email = support@DigiCert.com
 status = accredited:classic
 url = http://www.DigiCert-Grid.com/
 requires = DigiCertAssuredIDRootCA-Root
-version = 1.48
+version = 1.49
 sha1fp.0 = DD:D7:1E:A5:23:EB:EE:4D:EB:29:41:24:D3:AE:52:D9:CA:19:73:AC
 ~

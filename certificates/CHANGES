@@ -1,7 +1,13 @@
 Changes to the VDT certificates package
 
+===== Version 68 ======
+Release on 14-Aug-2012
+
+Updated to IGTF 1.49:
+  * Added ANSPGrid (126f0acf) classic CA (BR)
+  * Extended root cert validity for CA ce33db76 to 20yr (IR)
+
 ===== Version 67 =====
-Release on XXX
 
 Updated to IGTF 1.48:
   * Extended life time of DFN GridGermany Root (1149214e) and CDPs  (DE)

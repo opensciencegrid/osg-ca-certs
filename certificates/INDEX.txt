@@ -7,6 +7,7 @@ Hash      Source                            More Information                    
 10718cba  CILogon                           http://ca.cilogon.org/                              I
 1149214e  Germany - DFN-GridGermany-Root    http://www.pca.dfn.de/                              I
 11b4a5a2  Portugal - LIPCA                  http://ca.lip.pt/                                   I
+126f0acf  ANSPGrid                          http://gridca.ansp.br                               I
 163af95c  CNRS2                             http://igc.services.cnrs.fr/GRID-FR/                I
 1691b9ba  Turkey - TRGrid                   http://www.grid.org.tr/ca/                          I
 169d7f9c  TERENAeSciencePersonalCA          https://www.terena.org/activities/tcs/              I
@@ -104,4 +105,4 @@ ff94d436  Croatia - SRCE                    http://ra.srce.hr/                  
 ffc3d59b  UKeScienceCA-2B                   http://www.grid-support.ac.uk/ca/                   I
 
 Sources
-I: IGTF 1.48 http://www.gridpma.org/ 
+I: IGTF 1.49 http://www.gridpma.org/ 
