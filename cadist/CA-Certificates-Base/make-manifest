@@ -1,0 +1,97 @@
+#!/usr/bin/env perl
+
+
+use Getopt::Long;
+
+my @keys = qw(itb);
+my %args;
+@args{@keys} = ("") x @keys;
+GetOptions(\%args,"itb+","help+");
+
+if ( $args{help} ) {
+  usage();
+  exit 0;
+}
+
+my $cert_dir = ".";
+my $manifest_file = "ca-certs-version";
+
+my $tarball_path = "osg-certificates-$ENV{OUR_CERTS_VERSION}.tar.gz";
+my $tarball_name = $tarball_path;
+my $tarball_version;
+my $tarball_release;
+my $tarball_releasetype;
+my $exit;
+my $manifest;
+my $repository = "software.grid.iu.edu/pacman/cadist";
+if ( index($ENV{OUR_CERTS_VERSION},"ITB") > 0 || $args{itb} ) {
+  $repository = "software-itb.grid.iu.edu/pacman/cadist";
+}
+
+if ($tarball_name =~ /(\d+)\.(\d+)([A-z]*)\.tar/) {
+    $tarball_version = $1;
+    $tarball_release = $2;
+    $tarball_releasetype = $3;
+    $tarball_release = $tarball_release . $tarball_releasetype;
+} else {
+    die "Can't parse $tarball_name to extract version and release information.\n";
+}
+
+if (! -e $tarball_path) {
+    die "Can't access $tarball_path\n";
+}
+
+print "Making manifest of $tarball_path...\n";
+
+##
+## Calculate the MD5 of our tarbal
+##
+my $md5sum_out = `md5sum $tarball_path 2> /dev/null`;
+my $md5sum = (split(/ /, $md5sum_out))[0];
+
+##
+## Calculate the timestamp
+##
+my $timestamp;
+my ($sec,$min,$hour,$mday,$month,$year) = gmtime(time);
+$month++;
+$year += 1900;
+$timestamp = sprintf("%d%02d%02dT%02d%02d%02d",
+                     $year, $month, $mday, $hour, $min, $sec);
+
+##
+## Figure out a text version of the description string that can eventually be
+## put into vdt-version (via the updater script)
+##
+$versiondesc = "$ENV{OUR_CERTS_VERSION} (includes IGTF $ENV{IGTF_CERTS_VERSION} CAs)";
+
+## 
+## Create the manifest
+##
+$manifest .= "dataversion=1             # The version of data in this file\n";
+$manifest .= "timestamp=$timestamp # Time of creation of this file\n";
+$manifest .= "certsversion=$tarball_version.$tarball_release         # Version of the certificates\n";
+$manifest .= "versiondesc=$versiondesc\n";
+$manifest .= "tarball=http://$repository/$tarball_version.$tarball_release/$tarball_name\n";
+$manifest .= "tarball_md5sum=$md5sum\n";
+
+## 
+## Write the manifest
+##
+open(MANIFEST, ">$cert_dir/$manifest_file");
+print MANIFEST $manifest;
+close(MANIFEST);
+
+print "    Manifest: $cert_dir/$manifest_file\n";
+
+exit 0;
+
+#####################################################################
+sub usage() {
+  print "$0: [--itb] [--help]
+      Generates the manifest file for pacman, ca-certs-version
+        --help  shows this text
+        --itb  forces the distribution point of the tarball to be for the ITB
+               even if the OSG version does not contain ITB.  This is needed
+               for a production release version that is first tested on ITB\n";
+}

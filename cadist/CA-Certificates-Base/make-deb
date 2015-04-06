@@ -1,0 +1,199 @@
+#!/usr/bin/env perl 
+use strict;
+
+use FileHandle;
+use Getopt::Long;
+
+my @keys = qw(revision help);
+my %args;
+@args{@keys} = ("") x @keys;
+GetOptions(\%args,"revision=i","help");
+
+my $keyid = "$ENV{OSGSECKEYID}";
+my $tarball_name = "osg-certificates-$ENV{OUR_CERTS_VERSION}.tar.gz";
+my $tarball_version;
+my $tarball_release;
+my $tarball_releasetype;
+my $deb_revision = "0"; # increment this only if releasing new DEB
+                       # from the same tarball
+if ( $args{revision} ) {
+  $deb_revision = $args{revision}
+}
+if ( $args{help} ) {
+  usage();
+  exit 1;
+}
+
+my $cur_dir = `pwd`;
+chomp($cur_dir);
+my $work_dir = "debs"; # Relative path from current working dir
+
+# The Debian package name for the CA certificates.  See:
+# http://www.debian.org/doc/debian-policy/ch-binary.html#s3.1
+my $deb_package = 'osg-ca-certs';
+my $deb_version = "$ENV{OUR_CERTS_VERSION}-$deb_revision";
+# The Debian priority level for the CA certificates package.  See:
+# http://www.debian.org/doc/debian-policy/ch-archive.html#s-priorities
+my $deb_priority = 'extra';
+# The Debian section in which to put the CA certificates package. See:
+# http://www.debian.org/doc/debian-policy/ch-archive.html#s-subsections
+my $deb_section = 'misc';
+
+
+my $tarball_path = $cur_dir . "/" . $tarball_name;
+my $exit;
+
+if ($tarball_name =~ /(\d+)\.(\d+)([A-z]*)\.tar/) {
+  $tarball_version = $1;
+  $tarball_release = $2;
+  $tarball_releasetype = $3;
+  $tarball_release = $tarball_release . $tarball_releasetype;
+} else {
+  die "Can't parse $tarball_name to extract version and release information.\n";
+}
+
+print "Making DEB of $tarball_path:\n";
+print "Certificates version: $tarball_version\n";
+print "Certificates release: $tarball_release\n";
+
+check_deb_tools();
+make_deb_dirs();
+unpack_certs();
+write_spec_file();
+$exit = make_deb();
+#if (!$exit) {
+#    $exit = copy_rpm();
+#    if (!$exit) {
+#        update_yum();
+#    }
+#}
+exit $exit;
+
+sub check_deb_tools()
+{
+    # make sure Debian commands are available and working
+    my @missing_debian_commands;
+    my $out = `which dpkg-deb 2>/dev/null`;
+    push(@missing_debian_commands, 'dpkg-deb') if (! $out);
+    my $out = `which fakeroot 2>/dev/null`;
+    push(@missing_debian_commands, 'fakeroot') if (! $out);
+    my $out = `which dpkg-scanpackages 2>/dev/null`;
+    push(@missing_debian_commands, 'dpkg-scanpackages') if (! $out);
+    my $out = `which debsigs 2>/dev/null`;
+    push(@missing_debian_commands, 'debsigs') if (! $out);
+
+    if (@missing_debian_commands) {
+        print 'make-deb: Missing the following Debian ';
+        print ((scalar(@missing_debian_commands) > 1) ? 'commands' : 'command');
+        print ": " . join(', ', @missing_debian_commands);
+        print "\nPlease make sure that required Debian tools are in your path. If necessary you may use build-deb-tools to install the necessary debian tools.\n";
+        exit 1;
+    }
+}
+
+sub make_deb_dirs()
+{
+    print "Making working directories...\n";
+    system("rm -rf $work_dir"); # Make sure there is no old cruft 
+    system("mkdir -p $work_dir/DEBIAN/");
+    system("mkdir -p $work_dir/etc/grid-security");
+    return;
+}
+
+sub unpack_certs
+{
+    print "Unpackaging certificate tarball...\n";
+    chdir("$work_dir/etc/grid-security");
+    system("tar xzf $tarball_path");
+    chdir($cur_dir);
+    return;
+}
+
+sub write_spec_file
+{
+    print "Writing DEB file...\n";
+
+    # create a control file
+    my $control = <<EOF;
+Package: $deb_package
+Version: $deb_version
+Priority: $deb_priority
+Section: $deb_section
+Conflicts: vdt-ca-certificates
+Architecture: all
+Maintainer: OSG Security Team <security\@opensciencegrid.org>
+Description: CA certificates from the OSG
+ The CA certificates distributed by the Open Science Grid.
+ They are based on IGTF release $ENV{IGTF_CERTS_VERSION}.
+EOF
+    my $control_fh = new FileHandle("$work_dir/DEBIAN/control", 'w');
+    if (not defined $control_fh) {
+            print "\nERROR: Could not create '$work_dir/DEBIAN/control': $!\n";
+                exit 1;
+    }
+    print $control_fh $control;
+    undef $control_fh; # automatically closes file
+
+    # create a changelog file
+    chomp(my $timestamp = `date -R`);
+    my $changelog = <<EOF;
+$deb_package ($deb_version) stable; urgency=low
+
+  * This distribution is based on IGTF release $ENV{IGTF_CERTS_VERSION}.
+ -- OSG Security Team <security\@opensciencegrid.org>  $timestamp
+EOF
+    my $changelog_fh = new FileHandle("$work_dir/DEBIAN/changelog", 'w');
+    if (not defined $changelog_fh) {
+        print "\nERROR: Could not create '$work_dir/DEBIAN/changelog': $!\n";
+        exit 1;
+    }  
+    print $changelog_fh $changelog;
+    undef $changelog_fh; # automatically closes file
+
+
+}
+
+sub make_deb
+{
+    my $exit;
+    print "Making DEB...\n";
+    my $deb_filename="$deb_package-$deb_version.deb";
+    print "Enter pass phrase for keyid $keyid when prompted...\n";
+    $exit = system("fakeroot dpkg-deb --build $work_dir $deb_filename > $cur_dir/deb.log");
+    if ($exit == 0) {
+        print "Success.\n";
+    } else {
+        print "Failed, log in $cur_dir/deb.log\n";
+    	return $exit;
+    }
+    $exit = system("debsigs -sign=gpg --default-key=$keyid $deb_filename > $cur_dir/deb_sign.log");
+    if ($exit == 0) {
+        print "Success.\n";
+    } else {
+        print "Failed, log in $cur_dir/deb_sign.log\n";
+    }
+    return $exit;
+}
+
+sub copy_rpm
+{
+}
+
+sub update_yum
+{
+# XXX don't know how to do this
+#    print "    Updating yum repository...\n";
+#    chdir("/p/vdt/public/html/vdt_rpms/vdt-ca-certs/");
+#    system("createrepo .");
+#    chdir($cur_dir);
+    return;
+}
+
+sub usage() {
+  print "$0: [--revision REV] [--help]
+    REV = debian revision number, default value 0
+  This command generates the debian package file for the CA distribution
+  is requires the tar file to exist already.
+  The debian revision number should only be incremented if it is a new
+  debian file for the same tarball.\n";
+}

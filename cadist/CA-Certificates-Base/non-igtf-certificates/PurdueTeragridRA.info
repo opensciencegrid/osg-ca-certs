@@ -1,0 +1,9 @@
+# PurdueTeragridRA.info file made by OSG
+#
+alias = PurdueTeragridRA
+url = http://tg-ca.purdue.teragrid.org:8080/ejbca/
+ca_url = unknown
+crl_url = http://tg-ca.purdue.teragrid.org:8080/67e8acfa.r0
+email = unknown
+status = unaccredited
+sha1fp.0 = 51:30:DF:D1:EF:97:6F:5D:29:59:91:07:31:5E:61:C9:5B:02:2C:EC

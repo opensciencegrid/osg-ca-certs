@@ -1,0 +1,53 @@
+#!/bin/sh
+# <CA alias>.install
+# installs CA files to directory $1
+# setting up symlinks for the pre and post openssl 1.0 style
+# hash names
+#  Using openssl 1.0:
+#   oldhash = openssl x509 -in <alias>.pem -noout -subject_hash_old
+#   newhash = openssl x509 -in <alias>.pem -noout -subject_hash
+#
+echo "No longer used, not installed."
+exit 1
+
+target=$1
+version=$2
+oldstyle=$3
+##################################################################
+### change these for a different CA ##############################
+alias=PurdueCA
+oldhash=95009ddc
+newhash=664adba0
+files="crl_url info signing_policy"
+links="info signing_policy"
+#################################################################
+#################################################################
+if [ -d $target ]; then
+    if [ ! $oldstyle ]; then
+	echo Installing $alias to $target
+	cp $alias.pem $target
+	ln -s $alias.pem $target/$oldhash.0
+	ln -s $alias.pem $target/$newhash.0
+	for afile in $files; do
+	    cp $alias.$afile $target
+	done
+	for  afile in $links; do
+	    ln -s $alias.$afile $target/$oldhash.$afile
+	    ln -s $alias.$afile $target/$newhash.$afile
+	done
+	echo "version = OSG-$version" >> $target/$alias.info
+	exit 0
+    else  # old style below
+	echo Installing $alias $oldhash to $target
+	cp $alias.pem $target/$oldhash.0
+	for afile in $files; do
+	    cp $alias.$afile $target/$oldhash.$afile
+	done
+	echo "version = OSG-$version" >> $target/$oldhash.info
+	exit 0
+    fi
+else
+    echo Failed to install $alias
+    exit 1
+fi
+

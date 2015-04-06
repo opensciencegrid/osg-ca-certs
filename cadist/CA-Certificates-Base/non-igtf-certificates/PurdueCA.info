@@ -1,0 +1,9 @@
+# PurdueCA.info file made by OSG
+#
+alias = PurdueCA
+url = http://tg-ca.purdue.teragrid.org:8080/ejbca/
+ca_url = unknown
+crl_url = http://tg-ca.purdue.teragrid.org:8080/95009ddc.r0
+email = unknown
+status = unaccredited
+sha1fp.0 = F0:FB:04:5D:45:89:60:F4:97:8E:A8:40:02:B6:22:5B:2E:22:BA:97

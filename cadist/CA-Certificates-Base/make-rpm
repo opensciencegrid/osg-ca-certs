@@ -1,0 +1,139 @@
+#!/usr/bin/env perl
+
+my $keyid = "$ENV{OSGSECKEYID}";
+my $tarball_path = "osg-certificates-$ENV{OUR_CERTS_VERSION}.tar.gz";
+my $tarball_name = $tarball_path;
+my $tarball_version;
+my $tarball_release;
+my $tarball_releasetype;
+my $rpm_version = "0"; # increment this only if releasing new RPMs
+                       # from the same tarball
+my $cur_dir = `pwd`;
+chomp($cur_dir);
+$tarball_path = $cur_dir . "/" . $tarball_path;
+my $exit;
+
+if ($tarball_name =~ /(\d+)\.(\d+)([A-z]*)\.tar/) {
+    $tarball_version = $1;
+    $tarball_release = $2;
+    $tarball_releasetype = $3;
+    $tarball_release = $tarball_release . $tarball_releasetype;
+} else {
+    die "Can't parse $tarball_name to extract version and release information.\n";
+}
+
+print "Making RPM of $tarball_path:\n";
+print "Certificates version: $tarball_version\n";
+print "Certificates release: $tarball_release\n";
+
+make_rpm_dirs();
+unpack_certs();
+write_spec_file();
+$exit = make_rpm();
+if (!$exit) {
+    $exit = copy_rpm();
+    if (!$exit) {
+        update_yum();
+    }
+}
+exit $exit;
+
+sub make_rpm_dirs()
+{
+    print "Making working directories...\n";
+    system("rm -rf rpm"); # Make sure there is no old cruft 
+    system("mkdir -p rpm/BUILD");
+    system("mkdir -p rpm/RPMS");
+    system("mkdir -p rpm/SOURCES");
+    system("mkdir -p rpm/SPECS");
+    system("mkdir -p rpm/SRPMS");
+    system("mkdir -p rpm/tmp");
+    return;
+}
+
+sub unpack_certs
+{
+    print "Unpackaging certificate tarball...\n";
+    chdir("rpm/tmp");
+    system("mkdir -p etc/grid-security");
+    chdir("etc/grid-security");
+    system("cp $tarball_path .");
+    system("tar xzf $tarball_name");
+    system("rm $tarball_name");
+    chdir($cur_dir);
+    return;
+}
+
+sub write_spec_file
+{
+    print "Writing spec file...\n";
+
+    chdir("rpm/tmp/etc/grid-security");
+
+    # Note that this `ls` lists directories, and merely listing the directory
+    # name is good enough for RPM to suck up all the files in that directory.
+    my @files = `ls -1d certificates/* `;
+    chomp(@files);
+    chdir($cur_dir);
+
+    my @files = sort @files;
+
+    open(SPEC_FILE, "> rpm/SPECS/cert.spec");
+    print SPEC_FILE "Summary: CA Certificates for the Open Science Grid\n";
+    print SPEC_FILE "Name:  osg-ca-certs\n";
+    print SPEC_FILE "Version: $tarball_version.$tarball_release\n";
+    print SPEC_FILE "Release: $rpm_version\n";
+    print SPEC_FILE "Group: OSG\n";
+    print SPEC_FILE "License: n/a\n";
+    print SPEC_FILE "URL: http://www.opensciencegrid.org\n";
+    print SPEC_FILE "Vendor: Open Science Grid\n";
+    print SPEC_FILE "Packager: Open Science Grid\n";
+    print SPEC_FILE "Prefix: /etc/grid-security\n";
+    print SPEC_FILE "Buildroot: $cur_dir/rpm/tmp\n";
+    print SPEC_FILE "BuildArch: noarch\n";
+    print SPEC_FILE "%description\n";
+    print SPEC_FILE "The CA certificates distributed by the Open Science Grid.\n";
+    print SPEC_FILE "They are based on IGTF release $ENV{IGTF_CERTS_VERSION} ";
+    print SPEC_FILE "and include additional CAs from TeraGrid.\n";
+    print SPEC_FILE "%prep\n";
+    print SPEC_FILE "%build\n";
+    print SPEC_FILE "%install\n";
+    print SPEC_FILE "%files\n";
+    print SPEC_FILE "%defattr(-, root, root)\n";
+
+    foreach my $file(@files) {
+        print SPEC_FILE "/etc/grid-security/$file\n";
+    }
+}
+
+sub make_rpm
+{
+    my $exit;
+    print "Making RPM...\n";
+    print "Enter pass phrase for keyid $keyid when prompted...\n";
+
+    $exit = system("rpmbuild --sign --define \"_gpg_name $keyid\" --define \"_topdir $cur_dir/rpm\" -bb rpm/SPECS/cert.spec > $cur_dir/rpm/rpm.log 2>&1");
+    if ($exit == 0) {
+        print "Success.\n";
+    } else {
+        print "Failed, log in $cur_dir/rpm/rpm.log\n";
+    }
+    return $exit;
+}
+
+sub copy_rpm
+{
+    print "Copying RPM to $cur_dir...\n";
+    $exit = system("cp rpm/RPMS/noarch/osg-*rpm $cur_dir");
+    return $exit;
+}
+
+sub update_yum
+{
+# XXX don't know how to do this
+#    print "    Updating yum repository...\n";
+#    chdir("/p/vdt/public/html/vdt_rpms/vdt-ca-certs/");
+#    system("createrepo .");
+#    chdir($cur_dir);
+    return;
+}
