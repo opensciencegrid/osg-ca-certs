@@ -1,0 +1,148 @@
+# @(#)policy-igtf-classic.info - IGTF classic authorities
+# Generated Monday, 25 May, 2015
+version = 1.64
+requires = CNRS2-Grid-FR = 1.64, \
+    seegrid-ca-2013 = 1.64, \
+    RDIG = 1.64, \
+    CESNET-CA-Root = 1.64, \
+    UKeScienceCA-2B = 1.64, \
+    SRCE = 1.64, \
+    IRAN-GRID = 1.64, \
+    QuoVadis-Grid-ICA = 1.64, \
+    PK-Grid-2007 = 1.64, \
+    ANSPGrid = 1.64, \
+    NECTEC = 1.64, \
+    MYIFAM = 1.64, \
+    CNRS2-Projets = 1.64, \
+    MaGrid = 1.64, \
+    KISTI-2007 = 1.64, \
+    HellasGrid-Root = 1.64, \
+    SiGNET-CA = 1.64, \
+    UTN-USERTrust-RSA-CA = 1.64, \
+    pkIRISGrid = 1.64, \
+    CNRS2 = 1.64, \
+    COMODO-RSA-CA = 1.64, \
+    CALG = 1.64, \
+    CNIC = 1.64, \
+    InCommon-IGTF-Server-CA = 1.64, \
+    DigiCertGridCA-1G2-Classic-2015 = 1.64, \
+    NIIF-Root-CA-2 = 1.64, \
+    MARGI = 1.64, \
+    UniandesCA = 1.64, \
+    NAREGI = 1.64, \
+    LACGridCA = 1.64, \
+    CERN-GridCA = 1.64, \
+    BEGrid2008 = 1.64, \
+    QuoVadis-Root-CA1 = 1.64, \
+    CyGrid = 1.64, \
+    NIKHEF = 1.64, \
+    UNLPGrid = 1.64, \
+    UGRID = 1.64, \
+    RomanianGRID = 1.64, \
+    TRGrid = 1.64, \
+    SlovakGrid = 1.64, \
+    BG-ACAD-CA = 1.64, \
+    DFN-GridGermany-Root = 1.64, \
+    BalticGrid = 1.64, \
+    REUNA-ca = 1.64, \
+    HKU = 1.64, \
+    UNAMgrid-ca = 1.64, \
+    ASGCCA-2007 = 1.64, \
+    MD-Grid = 1.64, \
+    BrGrid = 1.64, \
+    TERENA-eScience-SSL-CA = 1.64, \
+    UKeScienceCA-2A = 1.64, \
+    DigiCertGridTrustCAG2-Classic = 1.64, \
+    LIPCA = 1.64, \
+    SDG = 1.64, \
+    EG-GRID = 1.64, \
+    INFN-CA-2006 = 1.64, \
+    ArmeSFo = 1.64, \
+    TERENA-eScience-SSL-CA-2 = 1.64, \
+    IHEP-2013 = 1.64, \
+    TERENA-eScience-SSL-CA-3 = 1.64, \
+    MREN-CA = 1.64, \
+    CESNET-CA-3 = 1.64, \
+    HellasGrid-CA-2006 = 1.64, \
+    DigiCertGridCA-1-Classic = 1.64, \
+    TSU-GE = 1.64, \
+    BYGCA = 1.64, \
+    DZeScience = 1.64, \
+    KEK = 1.64, \
+    AustrianGrid = 1.64, \
+    DigiCertAssuredIDRootCA-Root = 1.64, \
+    AddTrust-External-CA-Root = 1.64, \
+    GermanGrid = 1.64, \
+    NorduGrid = 1.64, \
+    UTN-USERFirst-Hardware = 1.64, \
+    DigiCertGridTrustCA-Classic = 1.64, \
+    AEGIS = 1.64, \
+    IGCA = 1.64, \
+    GridCanada = 1.64, \
+    DigiCertGridCA-1G2-Classic = 1.64, \
+    PolishGrid = 1.64, \
+    UKeScienceRoot-2007 = 1.64, \
+    DigiCertGridRootCA-Root = 1.64, \
+    CERN-Root-2 = 1.64
+obsoletes = CyGrid-old, \
+    CNRS-DataGrid, \
+    CESNET-old, \
+    SwissSign-Silver-Root, \
+    SWITCH-Personal2, \
+    SWITCH-CA2, \
+    SWITCH-Server2, \
+    KISTI, \
+    Russia, \
+    SWITCH-Server, \
+    SWITCH-Personal, \
+    LIP, \
+    GridCanada-old, \
+    UKeScience, \
+    HellasGrid, \
+    INFN, \
+    Spain, \
+    SiGNET, \
+    CERN, \
+    SWITCH-Personal-2006, \
+    SWITCH-Server-2006, \
+    ASGCCA, \
+    UKeScienceRoot, \
+    UKeScienceCA, \
+    PK-Grid, \
+    EstonianGrid, \
+    DFN-GridGermany-User, \
+    DFN-GridGermany-Server, \
+    BEGrid, \
+    SWITCH-Personal-2007, \
+    SwissSign-Root, \
+    SWITCH, \
+    SwissSign-Bronze, \
+    SwissSign-Silver, \
+    SWITCH-Server-2007, \
+    RMKI, \
+    CNRS, \
+    CNRS-Projets, \
+    CNRS-Grid-FR, \
+    NGO-Netrust, \
+    CESNET, \
+    Grid-Ireland, \
+    UKeScienceCA-2007, \
+    TACC-Classic, \
+    TACC-Root, \
+    IUCC, \
+    AIST, \
+    JUnet-CA, \
+    SWITCHgrid-Root, \
+    APAC, \
+    DOEGrids, \
+    ESnet, \
+    IHEP, \
+    SEE-GRID, \
+    PRAGMA-UCSD, \
+    SWITCH-QuoVadis-Grid-ICA, \
+    ULAGrid-CA-2008, \
+    HIAST, \
+    NCHC, \
+    NIIF, \
+    CERN-Root, \
+    CERN-TCA

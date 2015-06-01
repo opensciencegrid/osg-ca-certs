@@ -1,0 +1,4 @@
+# @(#)policy-igtf-iota.info - IGTF iota authorities
+# Generated Monday, 25 May, 2015
+version = 1.64
+requires = cilogon-basic = 1.64
