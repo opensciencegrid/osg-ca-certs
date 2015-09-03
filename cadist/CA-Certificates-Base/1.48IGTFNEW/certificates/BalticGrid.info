@@ -1,0 +1,13 @@
+# /DC=org/DC=balticgrid/CN=Baltic Grid Certification Authority
+# @(#)$Id: 2a237f16.info,v 1.3 2015/06/18 09:44:53 pmacvsdg Exp $
+# 
+# 
+alias = BalticGrid
+ca_url = http://ca.balticgrid.org/2a237f16.0
+crl_url = http://ca.balticgrid.org/2a237f16.r0
+email = ca@ca.balticgrid.org
+status = accredited:classic
+url = http://ca.balticgrid.org/
+version = 1.67
+sha1fp.0 = 01:A0:EA:93:2D:25:4B:6E:C9:1E:6F:1F:0E:AE:C9:1A:9A:76:17:1C
+subjectdn = "/DC=org/DC=balticgrid/CN=Baltic Grid Certification Authority"
