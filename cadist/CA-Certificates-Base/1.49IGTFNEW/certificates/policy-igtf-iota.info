@@ -1,0 +1,5 @@
+# @(#)policy-igtf-iota.info - IGTF iota authorities
+# Generated Monday, 28 Sep, 2015
+version = 1.68
+requires = cilogon-basic = 1.68
+subjectdn = "/DC=org/DC=cilogon/C=US/O=CILogon/CN=CILogon Basic CA 1"
