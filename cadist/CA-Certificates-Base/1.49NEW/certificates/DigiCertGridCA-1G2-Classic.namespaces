@@ -1,0 +1,20 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)1cdf1cd9.namespaces
+# CA alias    : DigiCertGridCA-1-G2-Classic
+#    subord_of: DigiCertGridRootCA-Root
+#    subjectDN: THIS IS A TRANSITENT CA - WILL BE REPLACED WITH A FORWARD RDN
+#               ORDERING SOON - ISSUE 20150313-01
+#               /DC=DigiCert-Grid/DC=com/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2
+#    hash     : 1cdf1cd9
+
+TO Issuer "/DC=DigiCert-Grid/DC=com/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2" \
+  PERMIT Subject "/DC=com/DC=DigiCert-Grid/.*"
+
+TO Issuer "/DC=DigiCert-Grid/DC=com/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2" \
+  PERMIT Subject "/DC=com/DC=DigiCertGrid/.*"
+
+TO Issuer "/DC=DigiCert-Grid/DC=com/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2" \
+  PERMIT Subject "/C=US/O=DigiCert Grid/.*"
+
