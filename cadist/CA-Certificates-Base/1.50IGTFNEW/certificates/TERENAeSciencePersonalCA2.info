@@ -1,0 +1,13 @@
+# @(#)$Id: ac2d1719.info,v 1.2 2015/06/18 09:44:56 pmacvsdg Exp $
+# /C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2
+alias = TERENAeSciencePersonalCA2
+requires = UTN-USERTrust-RSA-CA
+url = https://www.terena.org/activities/tcs/
+ca_url = http://crt.tcs.terena.org/TERENAeSciencePersonalCA2.crt
+crl_url = http://crl.tcs.terena.org/TERENAeSciencePersonalCA2.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+email = tcs-pma@terena.org
+status = accredited:mics
+version = 1.69
+sha1fp.0 = 8A:34:55:B4:DE:A6:5D:C4:B2:52:D2:94:52:40:CC:07:0C:C7:D4:E4
+subjectdn = "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 2"

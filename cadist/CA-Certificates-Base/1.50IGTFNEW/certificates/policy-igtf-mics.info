@@ -1,0 +1,19 @@
+# @(#)policy-igtf-mics.info - IGTF mics authorities
+# Generated Monday, 19 Oct, 2015
+version = 1.69
+requires = AAACertificateServices = 1.69, \
+    cilogon-silver = 1.69, \
+    TERENAeSciencePersonalCA = 1.69, \
+    TERENAeSciencePersonalCA2 = 1.69, \
+    UTNAAAClient = 1.69, \
+    TERENAeSciencePersonalCA3 = 1.69, \
+    HPCI = 1.69
+subjectdn = "/C=GB/ST=Greater Manchester/L=Salford/O=Comodo CA Limited/CN=AAA Certificate Services", \
+    "/DC=org/DC=cilogon/C=US/O=CILogon/CN=CILogon Silver CA 1", \
+    "/C=NL/O=TERENA/CN=TERENA eScience Personal CA", \
+    "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 2", \
+    "/C=US/ST=UT/L=Salt Lake City/O=The USERTRUST Network/OU=http://www.usertrust.com/CN=UTN-USERFirst-Client Authentication and Email", \
+    "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 3", \
+    "/C=JP/O=NII/OU=HPCI/CN=HPCI CA"
+obsoletes = TACC-MICS, \
+    NCSA-mics
