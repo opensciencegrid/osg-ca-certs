@@ -1,0 +1,13 @@
+#
+# @(#)$Id: 1f0e8352.info,v 1.7 2015/06/18 09:44:55 pmacvsdg Exp $
+# Information for CA NorduGrid
+#   obtained from 1f0e8352 in NorduGrid/
+alias = NorduGrid
+ca_url = http://ca.nordugrid.org/cacrt.crt
+url = http://ca.nordugrid.org/
+email = ca@nordugrid.org
+crl_url = http://ca.nordugrid.org/cacrl.crl
+status = accredited:classic
+version = 1.69
+sha1fp.0 = C8:7D:56:98:CD:46:B0:D1:F0:24:88:0C:15:8A:9E:8F:98:4D:B1:6B
+subjectdn = "/O=Grid/O=NorduGrid/CN=NorduGrid Certification Authority"

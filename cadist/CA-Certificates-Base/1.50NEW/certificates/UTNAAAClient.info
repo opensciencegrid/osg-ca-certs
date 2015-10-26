@@ -1,0 +1,15 @@
+#
+# @(#)$Id: 9ec3a561.info,v 1.4 2015/06/18 09:44:56 pmacvsdg Exp $
+# Information for CA UTNAAAClient
+#   
+alias = UTNAAAClient
+url = https://www.terena.org/activities/tcs/
+ca_url = http://crt.usertrust.com/UTNAAAClient_CA.crt
+crl_url = http://crl.usertrust.com/UTN-USERFirst-ClientAuthenticationandEmail.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+requires = AAACertificateServices
+email = tcs-pma@terena.org
+status = accredited:mics
+version = 1.69
+sha1fp.0 = E6:A6:7A:FD:55:3B:5B:CB:E9:01:AA:B1:0F:A9:4C:A8:25:66:BC:27
+subjectdn = "/C=US/ST=UT/L=Salt Lake City/O=The USERTRUST Network/OU=http://www.usertrust.com/CN=UTN-USERFirst-Client Authentication and Email"

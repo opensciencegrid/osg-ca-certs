@@ -1,0 +1,13 @@
+# @(#)$Id: 29a95392.info,v 1.2 2015/06/18 09:44:56 pmacvsdg Exp $
+# /C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2
+alias = TERENA-eScience-SSL-CA-2
+requires = UTN-USERTrust-RSA-CA
+ca_url = http://crt.usertrust.com/TERENAeScienceSSLCA2.crt
+crl_url = http://crl.usertrust.com/TERENAeScienceSSLCA2.crl
+policy_url = https://www.terena.org/activities/tcs/repository/cps-server.pdf
+url = https://www.terena.org/activities/tcs/repository/
+email = tcs-pma@terena.org
+status = accredited:classic
+version = 1.69
+sha1fp.0 = 1C:CD:A0:E1:3F:AE:EB:FA:31:1D:BC:10:48:FB:28:54:03:94:AA:D7
+subjectdn = "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2"

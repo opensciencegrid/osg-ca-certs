@@ -1,0 +1,14 @@
+# @(#)$Id: 35105088.info,v 1.2 2015/06/18 09:44:56 pmacvsdg Exp $
+# C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority
+# 
+alias = UTN-USERTrust-RSA-CA
+requires = AddTrust-External-CA-Root
+ca_url = http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt
+crl_url = http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl
+policy_url = http://www.comodo.com/about/comodo-agreements.php
+url = http://www.comodo.com/
+email = tcs-pma@terena.org
+status = accredited:classic
+version = 1.69
+sha1fp.0 = EA:B0:40:68:9A:0D:80:5B:5D:6F:D6:54:FC:16:8C:FF:00:B7:8B:E3
+subjectdn = "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority"
