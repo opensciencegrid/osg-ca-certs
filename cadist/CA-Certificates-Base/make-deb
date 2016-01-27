@@ -160,7 +160,8 @@ sub make_deb
     my $deb_filename="$deb_package-$deb_version.deb";
     print "Enter pass phrase for keyid $keyid when prompted...\n";
     $exit = system("fakeroot dpkg-deb --build $work_dir $deb_filename > $cur_dir/deb.log");
-    if ($exit == 0) {
+print "fakeroot dpkg-deb --build $work_dir $deb_filename > $cur_dir/deb.log"; 
+   if ($exit == 0) {
         print "Success.\n";
     } else {
         print "Failed, log in $cur_dir/deb.log\n";
