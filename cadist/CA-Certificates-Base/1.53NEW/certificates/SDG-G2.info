@@ -1,0 +1,8 @@
+alias = SDG-G2
+crl_url = http://ca.sdg.grid.cn/crl/cacrl-g2.crl
+email = sdgca@cnic.cn
+status = accredited:classic
+url = http://ca.sdg.grid.cn/en/
+version = 1.72
+sha1fp.0 = 0C:C6:45:60:07:16:61:ED:D4:A9:41:CE:EA:D3:00:4C:F1:DA:EF:F9
+subjectdn = "/DC=CN/DC=Grid/DC=SDG/CN=Scientific Data Grid CA - G2"
