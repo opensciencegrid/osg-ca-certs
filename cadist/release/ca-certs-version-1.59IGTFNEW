@@ -1,6 +1,6 @@
 dataversion=1             # The version of data in this file
-timestamp=20170109T145012 # Time of creation of this file
+timestamp=20170111T190153 # Time of creation of this file
 certsversion=1.59IGTFNEW         # Version of the certificates
 versiondesc=1.59IGTFNEW (includes IGTF 1.79 CAs)
 tarball=http://software.grid.iu.edu/pacman/cadist/1.59IGTFNEW/osg-certificates-1.59IGTFNEW.tar.gz
-tarball_md5sum=dcfb1553e82cf594092e38c877c43c2a
+tarball_md5sum=c5be2087e3d4d29004562eb85ea2c6cd
