@@ -56,6 +56,10 @@ print "Making DEB of $tarball_path:\n";
 print "Certificates version: $tarball_version\n";
 print "Certificates release: $tarball_release\n";
 
+#foreach my $key (keys %ENV) {
+#	print $key ." = " . $ENV{$key} . "\n";
+#}
+
 check_deb_tools();
 make_deb_dirs();
 unpack_certs();
