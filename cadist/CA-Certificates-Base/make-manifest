@@ -23,7 +23,7 @@ my $tarball_release;
 my $tarball_releasetype;
 my $exit;
 my $manifest;
-my $repository = "software.grid.iu.edu/pacman/cadist";
+my $repository = "repo.grid.iu.edu/pacman/cadist";
 if ( index($ENV{OUR_CERTS_VERSION},"ITB") > 0 || $args{itb} ) {
   $repository = "software-itb.grid.iu.edu/pacman/cadist";
 }
