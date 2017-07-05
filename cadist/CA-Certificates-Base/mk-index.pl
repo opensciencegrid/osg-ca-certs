@@ -194,7 +194,7 @@ print OH "A list of md5sums is available in \n";
 print OH "<a href='cacerts_md5sum.txt'>cacerts_md5sum.txt file</a>.\n";
 print OH "<table border='1' cellspacing='2' cellpadding='2'><tr>";
 if ( $castyle eq "new" ) {
-  print OH "<td><b>OldHash</b></td>";
+#Commenting this line [07/03/2017]  print OH "<td><b>OldHash</b></td>";
   print OH "<td><b>NewHash</b></td>";
 } else {
   print OH "<td><b>Hash</b></td>";
@@ -281,7 +281,7 @@ while ( my $ca = shift(@cakeys) ) {
 print OH "</table>\n";
 print OH "<hr><b>Notes</b><br><a name=\"note1\">";
 print OH "<b>1</b> Version number is the IGTF release number except for CAs not included in IGTF, and then it is the OSG release number.<br/>\n";
-print OH "<b>OldHash</b> is the CA subject hash for openssl 0.9x<br/>\n";
+#Commenting this line [07/03/2017] print OH "<b>OldHash</b> is the CA subject hash for openssl 0.9x<br/>\n";
 print OH "<b>NewHash</b> is the CA subject has for openssl 1.x<br/>\n";
 print OH "</body></html>\n";
 close(OH);
