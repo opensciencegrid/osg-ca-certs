@@ -190,8 +190,10 @@ print OH "CA certificate release, then check the \n";
 print OH "<a href='CHANGES'>CA certificate change log</a>. \n";
 print OH "The ca-certs-version file used by pacman is \n";
 print OH "<a href='ca-certs-version'>here</a>. \n";
-print OH "A list of md5sums is available in \n";
-print OH "<a href='cacerts_md5sum.txt'>cacerts_md5sum.txt file</a>.\n";
+#[12/27/17]print OH "A list of md5sums is available in \n";
+#[12/27/17]print OH "<a href='cacerts_md5sum.txt'>cacerts_md5sum.txt file</a>.\n";
+print OH "A list of sha256sums is available in \n";
+print OH "<a href='cacerts_sha256sum.txt'>cacerts_sha256sum.txt file</a>.\n";
 print OH "<table border='1' cellspacing='2' cellpadding='2'><tr>";
 if ( $castyle eq "new" ) {
 #Commenting this line [07/03/2017]  print OH "<td><b>OldHash</b></td>";

@@ -43,11 +43,17 @@ if (! -e $tarball_path) {
 
 print "Making manifest of $tarball_path...\n";
 
+#[12/27/17]##
+#[12/27/17]## Calculate the MD5 of our tarbal
+#[12/27/17]##
+#[12/27/17]my $md5sum_out = `md5sum $tarball_path 2> /dev/null`;
+#[12/27/17]my $md5sum = (split(/ /, $md5sum_out))[0];
+
 ##
-## Calculate the MD5 of our tarbal
+## Calculate the SHA256 of our tarbal
 ##
-my $md5sum_out = `md5sum $tarball_path 2> /dev/null`;
-my $md5sum = (split(/ /, $md5sum_out))[0];
+my $sha256sum_out = `sha256sum $tarball_path 2> /dev/null`;
+my $sha256sum = (split(/ /, $sha256sum_out))[0];
 
 ##
 ## Calculate the timestamp
@@ -73,7 +79,8 @@ $manifest .= "timestamp=$timestamp # Time of creation of this file\n";
 $manifest .= "certsversion=$tarball_version.$tarball_release         # Version of the certificates\n";
 $manifest .= "versiondesc=$versiondesc\n";
 $manifest .= "tarball=http://$repository/$tarball_version.$tarball_release/$tarball_name\n";
-$manifest .= "tarball_md5sum=$md5sum\n";
+#[12/27/17]$manifest .= "tarball_md5sum=$md5sum\n";
+$manifest .= "tarball_sha256sum=$sha256sum\n";
 
 ## 
 ## Write the manifest
