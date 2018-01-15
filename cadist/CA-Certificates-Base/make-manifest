@@ -23,7 +23,8 @@ my $tarball_release;
 my $tarball_releasetype;
 my $exit;
 my $manifest;
-my $repository = "repo.grid.iu.edu/pacman/cadist";
+#[01/12/18]replacing repo.grid.iu.edu -> repo.opensciencegrid.org
+my $repository = "repo.opensciencegrid.org/pacman/cadist";
 if ( index($ENV{OUR_CERTS_VERSION},"ITB") > 0 || $args{itb} ) {
   $repository = "software-itb.grid.iu.edu/pacman/cadist";
 }
@@ -48,6 +49,13 @@ print "Making manifest of $tarball_path...\n";
 #[12/27/17]##
 #[12/27/17]my $md5sum_out = `md5sum $tarball_path 2> /dev/null`;
 #[12/27/17]my $md5sum = (split(/ /, $md5sum_out))[0];
+
+#[01/12/18]uncommenting the above comment
+##
+## Calculate the MD5 of our tarbal
+##
+my $md5sum_out = `md5sum $tarball_path 2> /dev/null`;
+my $md5sum = (split(/ /, $md5sum_out))[0];
 
 ##
 ## Calculate the SHA256 of our tarbal
@@ -80,6 +88,8 @@ $manifest .= "certsversion=$tarball_version.$tarball_release         # Version o
 $manifest .= "versiondesc=$versiondesc\n";
 $manifest .= "tarball=http://$repository/$tarball_version.$tarball_release/$tarball_name\n";
 #[12/27/17]$manifest .= "tarball_md5sum=$md5sum\n";
+#[01/12/18]uncommenting the above comment
+$manifest .= "tarball_md5sum=$md5sum\n";
 $manifest .= "tarball_sha256sum=$sha256sum\n";
 
 ## 
