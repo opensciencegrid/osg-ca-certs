@@ -9,10 +9,11 @@ the VDT, then please refer to this link:
 OSG IGTF CA Package in new format (md5, sha1 hashs) to support openssl 1.x
 
 ====== Version 1.69 ===========
-Built 10 JAN 2018
+Built 16 JAN 2018
 
 IGTF 1.89 release
 * Discontinued expiring UGRID (2008) root CA (UA)
+
 
 ====== Version 1.68 ===========
 Built 27 NOV 2017
