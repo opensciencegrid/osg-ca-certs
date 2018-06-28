@@ -8,21 +8,23 @@ the VDT, then please refer to this link:
    http://vdt.cs.wisc.edu/releases/certs/ca_changes.txt
 OSG IGTF CA Package in new format (md5, sha1 hashs) to support openssl 1.x
 
-====== Version 1.72 ===========
+====== Version 1.73 ===========
 Built 15 MAY 2018
 
 IGTF 1.91 release
 * Updated MREN CA with extended validity period (ME)
 
+====== Version 1.72 ===========
+Built 4 MAY 2018
+
+* Added root certificate and intermediate certificates for Let's Encrypt CA
+IGTF 1.90 release
 
 ====== Version 1.71 ===========
 Built 4 MAY 2018
 
+* Added	new LetsEncrypt	CA
 IGTF 1.90 release
-* Added new Grid-FR hierarchy for Renater (AC-GRID-FR series) (FR)
-* Added new GARUDAINDIA2 root for key roll-over IGCA (IN)
-* Updated contact metadata for UNAM trust anchors (MX)
-
 
 ====== Version 1.70 ===========
 Built 27 MAR 2018
