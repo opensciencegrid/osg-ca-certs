@@ -1,0 +1,12 @@
+# @(#)policy-igtf-mics.info - IGTF mics authorities
+# Generated Wednesday, 24 Oct, 2018
+alias = policy-igtf-mics
+version = 1.94
+requires = cilogon-silver = 1.94, \
+    TERENAeSciencePersonalCA3 = 1.94, \
+    HPCI = 1.94
+subjectdn = "/DC=org/DC=cilogon/C=US/O=CILogon/CN=CILogon Silver CA 1", \
+    "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 3", \
+    "/C=JP/O=NII/OU=HPCI/CN=HPCI CA"
+obsoletes = TACC-MICS, \
+    NCSA-mics
