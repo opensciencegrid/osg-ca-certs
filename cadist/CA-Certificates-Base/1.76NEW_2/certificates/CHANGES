@@ -8,7 +8,7 @@ the VDT, then please refer to this link:
    http://vdt.cs.wisc.edu/releases/certs/ca_changes.txt
 OSG CA Package in new format (md5, sha1 hashs) to support openssl 1.x
 
-===== Version 1.77 ===========
+===== Version 1.76_2 ===========
 Built 06 NOV 2018
 * Included MD5 checksum again 
 
