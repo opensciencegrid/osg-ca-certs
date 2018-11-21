@@ -98,5 +98,5 @@ ffc3d59b     530f7122     UKeScienceCA-2B.pem      http://www.grid-support.ac.uk
 95b96af1     522b8537     UNLPGrid.pem             https://www.pkigrid.unlp.edu.ar/               1.94   I
 #--------------------------------------------------------------------------------------------------------
 #
-# OSGversion 1.76NEW
+# OSGversion 1.77IGTFNEW
 # IndexTypeVersion 1
