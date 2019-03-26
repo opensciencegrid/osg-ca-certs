@@ -185,6 +185,16 @@ print OH "<h2>$header</h2>\n";
 print OH "<p> This page provides a table of all $ncas CAs that are part of\n";
 print OH " version $args{version} of the OSG CACert distribution - as \n";
 print OH "provided by the OSG security team.\n";
+
+#[03/26/19]following lines of code will show the URLs for latest version of OSG and IGTF CA bundles 
+$args{version} =~ m{(\d+\.\d+)}; 
+print OH "<a href='http://repo.opensciencegrid.org/pacman/cadist/" . $1 . "IGTFNEW/osg-certificates-" . $1 . "IGTFNEW.tar.gz'>Latest IGTF CA bundle</a>\n";
+print OH "<a href='http://repo.opensciencegrid.org/pacman/cadist/" . $1 . "NEW/osg-certificates-" . $1 . "NEW.tar.gz'>Latest OSG CA bundle</a>\n";
+
+#[03/26/19]information about non-IGTF CAs, i.e. Let's Encrypt
+print OH "OSG has included a non-IGTF CA (i.e. Let's Encrypt) in its CA distribution bundle."
+print OH "For more information please visit <a href='https://letsencrypt.org/certificates/'>Chain of Trust.</a>\n";
+
 print OH "<p> If you are curious about what has changed in each \n";
 print OH "CA certificate release, then check the \n";
 print OH "<a href='CHANGES'>CA certificate change log</a>. \n";
