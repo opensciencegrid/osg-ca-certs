@@ -1,0 +1,7 @@
+dataversion=1             # The version of data in this file
+timestamp=20190326T193501 # Time of creation of this file
+certsversion=1.80NEW         # Version of the certificates
+versiondesc=1.80NEW (includes IGTF 1.97 CAs)
+tarball=http://repo.opensciencegrid.org/pacman/cadist/1.80NEW/osg-certificates-1.80NEW.tar.gz
+tarball_md5sum=3883ad8d63b033b763d9fca31c3872df
+tarball_sha256sum=ef713650bf4e61bfc47c54d26ca76ec521efaa4c0649449072ade9fbfb20c7ee
