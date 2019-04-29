@@ -6,31 +6,32 @@ provided by the OSG security group, and hosted by the OSG GOC.
 If you are looking for previous listing of CHANGES that were made by
 the VDT, then please refer to this link:
    http://vdt.cs.wisc.edu/releases/certs/ca_changes.txt
-OSG IGTF CA Package in new format (md5, sha1 hashs) to support openssl 1.x
+OSG CA Package in new format (md5, sha1 hashs) to support openssl 1.x
 
-====== Version 1.81 ===========
+===== Version 1.81 ===========
 Built 29 APR 2019
 * withdrawn superseded IRAN-GRID authority (IR)
 
-====== Version 1.80 ===========
+===== Version 1.80 ===========
 Built 26 MAR 2019
 * temporarily withdrawn EG-GRID 4a96b1ea for network availability reasons (EG)
 
-====== Version 1.79 ===========
+===== Version 1.79 ===========
 Built 27 FEB 2019
 * withdrawn superseded QuoVadis-Grid-ICA (1st gen) CA (BM)
 * added new trust anchor MD-Grid-CA-T for rollover of existing CA (MD)
 * discontinued expiring 2009 series MD-Grid-CA (MD)
 
-====== Version 1.78 ===========
+===== Version 1.78 ===========
 Built 08 JAN 2019
+IGTF 1.95 release
 * Updated namespaces and signing_policy files for CILogon Silver CA to permit DNs without "/C=US" (US)
 
-====== Version 1.77 ===========
+===== Version 1.77 ===========
 Built 06 NOV 2018
-* included MD5 checksum for individual certs
+* Included MD5 checksum again 
 
-====== Version 1.76 ===========
+===== Version 1.76 ===========
 Built 30 OCT 2018
 
 IGTF 1.94 release
@@ -57,16 +58,14 @@ IGTF 1.91 release
 * Updated MREN CA with extended validity period (ME)
 
 ====== Version 1.72 ===========
-Built 4 MAY 2018
+Built 7 MAY 2018
 
 * Added root certificate and intermediate certificates for Let's Encrypt CA
-IGTF 1.90 release
 
 ====== Version 1.71 ===========
 Built 4 MAY 2018
 
 * Added	new LetsEncrypt	CA
-IGTF 1.90 release
 
 ====== Version 1.70 ===========
 Built 27 MAR 2018
@@ -75,7 +74,6 @@ IGTF 1.90 release
 * Added new Grid-FR hierarchy for Renater (AC-GRID-FR series) (FR)
 * Added new GARUDAINDIA2 root for key roll-over IGCA (IN)
 * Updated contact metadata for UNAM trust anchors (MX)
-
 
 ====== Version 1.69 ===========
 Built 16 JAN 2018
@@ -209,7 +207,6 @@ IGTF 1.73 release
 Built 1 MAR 2016
 
 IGTF 1.72 release
-
 * Added roll-over subordinate for the SDG CA G2 (CN)
 * Added CERN LCG IOTA CA (CERN)
 * Updated PSC MyProxy CA with extended validity (US)
@@ -224,7 +221,6 @@ IGTF 1.71 release
 * Removed expiring SDG CA (CN)
 * Updated CyGrid Root CA with extended validity period (CY)
 * Updated BG-ACAD-CA with extended validity period (BG)
-
 
 ====== Version 1.51 ===========
 Built 30 NOV 2015
@@ -262,7 +258,7 @@ IGTF 1.67 release
 * Withdrawn G2 root for IPM CA (IR)
 
 ====== Version 1.47 ============
-Built 08 Jul 2015
+Built 30 Jun 2015
 
 IGTF 1.65 release
 
@@ -292,7 +288,7 @@ IGTF 1.63 release
 * Removed obsoleted and replaced NIIF CA (HU)
 * Extended validity period of the KEK CA (JP)
 * Removed obsoleted d254cc30/CERN-Root 1d879c6c/CERN-TCA anchors (CERN)
-* Updated RPDNC namespaces to permit DigiCert Grid Trust G2 ICAs for
+* Updated RPDNC namespaces to permit DigiCert Grid Trust G2 ICAs for 
   DigiCert Assured ID Root CA (US)
 * Updated RPDNC namespaces and signing_policy files for G2 series
   DigiCert Grid CAs pending ICA reissuance for reverse RDN issue (US)
@@ -320,7 +316,6 @@ IGTF 1.61 release
 * Added new IPv6-capable crl_url entries for NCSA and CILogon CAs (US)
 * Added accredited TSU (Georgia) CA (GE)
 * Extended life time and updated digest function of AustrianGrid CA (AT)
-
 
 ====== Version 1.42 =============
 Built 30 Oct 2014
