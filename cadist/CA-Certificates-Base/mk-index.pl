@@ -200,10 +200,12 @@ print OH "CA certificate release, then check the \n";
 print OH "<a href='CHANGES'>CA certificate change log</a>. \n";
 print OH "The ca-certs-version file used by pacman is \n";
 print OH "<a href='ca-certs-version'>here</a>. \n";
+
 #[10/30/18] commenting out to remove MD5 sum
 #[11/06/18] uncommenting the following code to again include MD5 sum
-print OH "A list of md5sums is available in \n";
-print OH "<a href='cacerts_md5sum.txt'>cacerts_md5sum.txt file</a>.\n";
+#[10/21/19] commenting out to remove MD5 sum [SOFTWARE-3005]
+#print OH "A list of md5sums is available in \n";
+#print OH "<a href='cacerts_md5sum.txt'>cacerts_md5sum.txt file</a>.\n";
 
 print OH "A list of sha256sums is available in \n";
 print OH "<a href='cacerts_sha256sum.txt'>cacerts_sha256sum.txt file</a>.\n";
