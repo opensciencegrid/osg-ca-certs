@@ -3,4 +3,4 @@ timestamp=20200129T200400 # Time of creation of this file
 certsversion=1.86IGTFNEW  # Version of the certificates
 versiondesc=1.86IGTFNEW (includes IGTF 1.104 pre-release CAs)
 tarball=http://repo.opensciencegrid.org/pacman/cadist/1.104IGTFNEW/osg-certificates-1.104IGTFNEW.tar.gz
-tarball_sha256sum=5042fe87d8e7eda036ca76c5ca1cf4ed9a90f5f98c821b82c7ed6b6aa6a74136
+tarball_sha256sum=6bfdf7384d2ed9466d1b4e46afcf470e0edbf32a21c03140304eac5627cae31b
